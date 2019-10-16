@@ -1,28 +1,33 @@
 ---
 layout: page
 title: About Victor
-subtitle: a data scientist and aspiring statistician
+subtitle: _Data scientist_ and aspiring _Statistician_
 ---
 
-Self-directed and driven data scientist with comprehensive accomplishments applying statistical modeling, machine learning and
-data visualization to ensure success and achieve goals. Known as an innovative thinker with strong SQL, Python, R acumen and
-Julia. Demonstrated success developing and seamlessly executing plans across complex data sets. Recognized for maximizing
-performance by implementing appropriate data mining strategies through analysis of details to gain understanding of the data
-structures, databases, relationships and business needs. Highly organized, creative problem solver who excels at producing business
-value by applying data science best practices to challenging problems.
+### Introduction
+
+- I am a data scientist at Ritual now. Before joining this fast growing Toronto based startup, I got degrees at U Pitt and UCLA. During that period, I did multiple researches in theoretical chemistry and optimization's application in machine learning. 
+
+- I love :octocat:, R, Python. I love to beatify my script. Love statistics and the beauty of math. 
+
+- Still learn to code line by line. Hope to learn more about algorithm and distributed computing. 
+
+And
+
+- Youth is not a time of life it is a state of mind
 
 
 ### Work
 - Los Angeles Capital Management           Los Angeles, CA, USA.
-Research Analyst (Intern)                July 2018 – December 2018
+ -Research Analyst (Intern)                July 2018 – December 2018
 
 - Ritual.co                                Toronto, ON
-Data Scientist                           February 2019 – Present
+ - Data Scientist                           February 2019 – Present
 
 ### Education
 
-- UCLA ANDERSON SCHOOL OF MANAGEMENT       
+- UCLA Anderson School of Management, Master in Business Analytics 
   - Los Angeles, CA, December 2018
 
-- University of Pittsburgh                 
+- University of Pittsburgh, Bachelor in Chemistry, Minor in Math            
   - Pittsburgh, PA, May 2016
