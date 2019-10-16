@@ -3,21 +3,12 @@ title: "Statistical Data Analysis"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Bayesian Approach for Experimental Analysis
 
-This is document explains my approach to conduct an experimental analysis. In this case, my point of interest is CTR (click-through-rate). From a statistical perspective, it follows binomial distribution, which has 0/1 outcome only. 
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
 
 ```{r}
 # This file describes how to use Bayesian statistics to conduct A/B test. 
@@ -111,7 +102,7 @@ plot(test1)
 ###### Control Group Internal Check ######
 
 ##### Control Group1 #####
-menu_con <- read.csv("menu_v2_control.csv", stringsAsFactors = FALSE)
+menu_con <- read_csv("menu_v2_control.csv", stringsAsFactors = FALSE)
 menu_con <- menu_con[ which(menu_con$Experiment.Partition.ID == 5), ]
 
 menu_con_df <- menu_con %>% dplyr::select("Timestamp.Date",
@@ -140,7 +131,7 @@ total_vec <- c(purchase_vec, non_purchase_vec)
 total_vec <- sample(total_vec)
 control1 <- total_vec
 
-menu_con <- read.csv("menu_v2_control.csv", stringsAsFactors = FALSE)
+menu_con <- read_csv("menu_v2_control.csv", stringsAsFactors = FALSE)
 menu_con <- menu_con[ which(menu_con$Experiment.Partition.ID == 6), ]
 
 menu_con_df <- menu_con %>% dplyr::select("Timestamp.Date",
@@ -177,4 +168,4 @@ plot(test2)
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+

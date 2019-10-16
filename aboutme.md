@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Victor
-subtitle: _Data scientist_ and aspiring _Statistician_
+subtitle: --Data scientist-- and aspiring --Statistician--
 ---
 
 ### Introduction
@@ -18,11 +18,11 @@ And
 
 
 ### Work
-- Los Angeles Capital Management           Los Angeles, CA, USA.
- -Research Analyst (Intern)                July 2018 – December 2018
+- Los Angeles Capital Management,           Los Angeles, CA, USA.
+  - Research Analyst (Intern)              July 2018 – December 2018
 
-- Ritual.co                                Toronto, ON
- - Data Scientist                           February 2019 – Present
+- Ritual.co,                                Toronto, ON
+  - Data Scientist                         February 2019 – Present
 
 ### Education
 
