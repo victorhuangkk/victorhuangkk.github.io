@@ -9,12 +9,12 @@ In order to plan marketing campaign beforehand, marketing team's manager need to
 
 Based on historical data, users' organic(baseline) reactivate rate was 2.3%. To provide business decisions, analysts were required to provide stories. To accomplish this task, power analysis was used here.
 
-To be simple, power analysis connects four varaibles:
+To be simple, power analysis connects four variables:
 
 - Significance Level, which represents type I error probability
 - Statistical Power, which represents 1 - type II error probability
 - Population, which represents number of observations
-- Effective size, <img src="https://render.githubusercontent.com/render/math?math=2asin(\sqrt{p1})-2asin(\sqrt{p2})"> 
+- Effective size, <img src="https://render.githubusercontent.com/render/math?math=2arcsin(\sqrt{p1})-2arcsin(\sqrt{p2})">
 
 
 I used a R function called pwr. It accept 3 out of 4 power analysis input and returns the forth one.
@@ -52,7 +52,7 @@ Then, we conducted stratified sampling to create experimental group follow the s
 Here are some need to be mentioned.
 
 - Set up random seed for reproducibility
-- Metro, acquisistion channel and activivation year were metrics requested by business team to be included. And they were all categorical variables.
+- Metro, acquisition channel and activation year were metrics requested by business team to be included. And they were all categorical variables.
 - Based on the number of bucket in each variable, the size of population and sample fraction in the
 
 
