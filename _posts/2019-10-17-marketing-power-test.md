@@ -1,12 +1,25 @@
 ---
 layout: post
 title: Marketing Power Analysis
-subtitle: ... or not to be?
 tags: [marketing, statistics]
 ---
 
 
-In order to plan marketing campaign beforehand, marketing team's manager need to understand the marketing
+In order to plan marketing campaign beforehand, marketing team's manager need to plan quarterly marketing spend. It is necessary to make data driven decision. This campaign tried to reactivate "dead" users.
+
+Based on historical data, users' organic(baseline) reactivate rate was 2.3%. To provide business decisions, analysts were required to provide stories. To accomplish this task, power analysis was used here.
+
+To be simple, power analysis connects four varaibles:
+
+- Significance Level, which represents type I error probability
+- Statistical Power, which represents 1 - type II error probability
+- Population, which represents number of observations
+- Effective size, <img src="https://render.githubusercontent.com/render/math?math=2asin(\sqrt{p1})-2asin(\sqrt{p2})"> 
+
+
+I used a R function called pwr. It accept 3 out of 4 power analysis input and returns the forth one.
+
+[pwr function](https://github.com/cran/pwr/blob/master/R/pwr.r.test.R)
 
 
 ~~~
@@ -29,4 +42,27 @@ for (i in 1:length(significance_level)) {
     mat[i,j] <- temp
   }
 }
+~~~
+
+Then, we conducted stratified sampling to create experimental group follow the same distribution as the population in our database. In general, I conducted stratified sampling with numerical and categorical variables differently.
+
+- Numerical variables: I grouped them into buckets and grouped.
+- Categorical variables: I grouped them directly. However, may change the
+
+Here are some need to be mentioned.
+
+- Set up random seed for reproducibility
+- Metro, acquisistion channel and activivation year were metrics requested by business team to be included. And they were all categorical variables.
+- Based on the number of bucket in each variable, the size of population and sample fraction in the
+
+
+~~~
+set.seed(88)
+
+stratified_sample <- user_data %>%
+  group_by(metro_id, channel, activated_year) %>%
+  mutate(num_rows=n()) %>%
+  sample_frac(0.02, weight=num_rows) %>%
+  ungroup %>%
+  select(user_id)
 ~~~
