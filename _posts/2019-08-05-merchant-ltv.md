@@ -8,7 +8,12 @@ tags: [marketing, statistics]
 
 As a two-side marketplace provider, merchants lifetime value is crucial to Ritual's success. Traditionally, customer lifetime value is calculated by the formula below:
 
-<img src="https://render.githubusercontent.com/render/math?math=2asin(\sqrt{p1})-2asin(\sqrt{p2})">
+However, there are two limitations about this approach.
+
+- Attrition rate varies term by term.
+- Profit margin are different.
+
+In order to improve incorporate the two limitations, a more dedicated approach was used here. Assume our vision for a merchant's lifetime value is 1 year.
 
 
 # Objective:
