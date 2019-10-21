@@ -1,0 +1,71 @@
+-- use existing merchant_weekly in `redash488.looker_scratch.LR_3Q5ZUJ6QQ5AIQZ0N8PF8G_merchant_weekly`
+-- generate derived table order_v1_p_extended_merchant_weekly
+-- running the following sql through the bigquery API to create table as select:
+-- Building Growth::order_v1_p_extended_merchant_weekly in dev mode on instance 2bf0d314499764fb23ec5f07e699ce14
+SELECT order_table.*, discount FROM starhopp3rprod.ritual.order order_table
+      LEFT JOIN starhopp3rprod.stingray.order_v1 on order_table.order_id=order_v1.order_id
+-- finished order_v1_p_extended_merchant_weekly => `redash488.looker_scratch.LR_3QKY66MTM3Y8LN8BH7HRF_order_v1_p_extended_merchant_weekly`
+WITH merchant_ritual_offers_extended_merchant_weekly AS (WITH merchant_aov AS (
+        SELECT
+          merchant_id
+          , SUM(total_micro/1e8)/COUNT(order_id) AS aov
+        FROM starhopp3rprod.stingray.order_v1
+        GROUP BY 1
+      ),
+
+      merchant_aov_group AS (
+        SELECT
+          merchant_id
+          , CASE WHEN aov<2.5 THEN '< $2.50'
+              WHEN aov BETWEEN 2.5 AND 5.0 THEN '$2.50 - $5.00'
+              WHEN aov BETWEEN 5.0 AND 7.5 THEN '$5.00 - $7.50'
+              WHEN aov BETWEEN 7.5 AND 10.0 THEN '$7.50 - $10.00'
+              WHEN aov BETWEEN 10.0 AND 12.5 THEN '$10.00 - $12.50'
+              WHEN aov BETWEEN 12.5 AND 15.0 THEN '$12.50 - $15.00'
+              WHEN aov>15 THEN '> $15.00'
+              END AS aov_group
+        FROM merchant_aov
+      )
+
+      SELECT
+        merchant.*
+        , IF(
+            (merchant.last_not_on_datetime > merchant.last_on_datetime
+              AND TIMESTAMP_DIFF(CURRENT_TIMESTAMP(),last_not_on_datetime,DAY)>30
+              AND merchant.first_on_timestamp > 0)
+              OR state IN ( 'OFF', 'LOST'),
+            1,
+            0) AS churned_flag
+        , IF(
+            (merchant.last_not_on_datetime > merchant.last_on_datetime
+              AND TIMESTAMP_DIFF(CURRENT_TIMESTAMP(),last_not_on_datetime,DAY)>30
+              AND merchant.first_on_timestamp > 0)
+              OR state IN ( 'OFF', 'LOST'),
+            merchant.last_on_datetime,
+            null) AS churned_timestamp
+        , aov_group
+
+      FROM starhopp3rprod.stingray.merchant
+      LEFT JOIN merchant_aov_group ON merchant.merchant_id=merchant_aov_group.merchant_id
+      )
+SELECT
+	CAST(merchant_weekly.merchant_calendar_month AS INT64)  AS merchant_weekly_merchant_calendar_month,
+	FORMAT_TIMESTAMP('%Y-%m', TIMESTAMP(FORMAT_TIMESTAMP('%F %T', merchant_weekly.first_on_timestamp , 'America/New_York'))) AS merchant_weekly_first_on_timestamp_month,
+	salesforce_merchant_cluster__c.segmentation__c  AS salesforce_merchant_cluster__c_segmentation__c,
+	merchant.metro_id  AS merchant_metro_id,
+	salesforce_account.brand_category__c  AS salesforce_account_brand_category__c,
+	COUNT(DISTINCT merchant_weekly.merchant_id ) AS merchant_weekly_distinct_merchants,
+	COALESCE(ROUND(COALESCE(CAST( ( SUM(DISTINCT (CAST(ROUND(COALESCE(COALESCE(orders.fee_corporate_discount_percent_micro,0)/1e8
+      + COALESCE(orders.fee_transaction_flat_micro,0)/1e8
+      + COALESCE(orders.fee_transaction_percent_micro,0)/1e8
+      + COALESCE(orders.fee_tip_micro,0)/1e8
+      ,0)*(1/1000*1.0), 9) AS NUMERIC) + (cast(cast(concat('0x', substr(to_hex(md5(CAST(orders.order_id  AS STRING))), 1, 15)) as int64) as numeric) * 4294967296 + cast(cast(concat('0x', substr(to_hex(md5(CAST(orders.order_id  AS STRING))), 16, 8)) as int64) as numeric)) * 0.000000001 )) - SUM(DISTINCT (cast(cast(concat('0x', substr(to_hex(md5(CAST(orders.order_id  AS STRING))), 1, 15)) as int64) as numeric) * 4294967296 + cast(cast(concat('0x', substr(to_hex(md5(CAST(orders.order_id  AS STRING))), 16, 8)) as int64) as numeric)) * 0.000000001) )  / (1/1000*1.0) AS FLOAT64), 0), 6), 0) AS orders_total_fees
+FROM `redash488.looker_scratch.LR_3Q5ZUJ6QQ5AIQZ0N8PF8G_merchant_weekly` AS merchant_weekly
+LEFT JOIN merchant_ritual_offers_extended_merchant_weekly AS merchant ON merchant_weekly.merchant_id = merchant.merchant_id
+LEFT JOIN `starhopp3rprod.salesforce_view.Account`
+     AS salesforce_account ON merchant_weekly.merchant_id = salesforce_account.merchant_id__c
+LEFT JOIN starhopp3rprod.salesforce_view.Merchant_Cluster__c  AS salesforce_merchant_cluster__c ON salesforce_account.merchant_cluster__c = salesforce_merchant_cluster__c.id
+LEFT JOIN `redash488.looker_scratch.LR_3QKY66MTM3Y8LN8BH7HRF_order_v1_p_extended_merchant_weekly` AS orders ON merchant_weekly.merchant_id = orders.merchant_id AND (FORMAT_TIMESTAMP('%F', TIMESTAMP_TRUNC(TIMESTAMP_ADD(TIMESTAMP_TRUNC(CAST(merchant_weekly.week  AS TIMESTAMP), DAY), INTERVAL (0 - CAST((CASE WHEN (EXTRACT(DAYOFWEEK FROM merchant_weekly.week ) - 1) - 1 + 7 < 0 THEN -1 * (ABS((EXTRACT(DAYOFWEEK FROM merchant_weekly.week ) - 1) - 1 + 7) - (ABS(7) * CAST(FLOOR(ABS(((EXTRACT(DAYOFWEEK FROM merchant_weekly.week ) - 1) - 1 + 7) / (7))) AS INT64))) ELSE ABS((EXTRACT(DAYOFWEEK FROM merchant_weekly.week ) - 1) - 1 + 7) - (ABS(7) * CAST(FLOOR(ABS(((EXTRACT(DAYOFWEEK FROM merchant_weekly.week ) - 1) - 1 + 7) / (7))) AS INT64)) END) AS INT64)) DAY), DAY))) = (FORMAT_TIMESTAMP('%F', TIMESTAMP_TRUNC(TIMESTAMP_ADD(TIMESTAMP_TRUNC(CAST(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York')) AS TIMESTAMP), DAY), INTERVAL (0 - CAST((CASE WHEN (EXTRACT(DAYOFWEEK FROM TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York'))) - 1) - 1 + 7 < 0 THEN -1 * (ABS((EXTRACT(DAYOFWEEK FROM TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York'))) - 1) - 1 + 7) - (ABS(7) * CAST(FLOOR(ABS(((EXTRACT(DAYOFWEEK FROM TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York'))) - 1) - 1 + 7) / (7))) AS INT64))) ELSE ABS((EXTRACT(DAYOFWEEK FROM TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York'))) - 1) - 1 + 7) - (ABS(7) * CAST(FLOOR(ABS(((EXTRACT(DAYOFWEEK FROM TIMESTAMP(FORMAT_TIMESTAMP('%F %T', orders.create_timestamp , 'America/New_York'))) - 1) - 1 + 7) / (7))) AS INT64)) END) AS INT64)) DAY), DAY)))
+
+WHERE ((((merchant_weekly.first_on_timestamp ) >= ((TIMESTAMP(FORMAT_TIMESTAMP('%F %T', TIMESTAMP(CONCAT(CAST(DATE_ADD(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS DATE), INTERVAL -4 YEAR) AS STRING), ' ', CAST(TIME(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS TIMESTAMP)) AS STRING)))), 'America/New_York'))) AND (merchant_weekly.first_on_timestamp ) < ((TIMESTAMP(FORMAT_TIMESTAMP('%F %T', TIMESTAMP(CONCAT(CAST(DATE_ADD(CAST(TIMESTAMP(CONCAT(CAST(DATE_ADD(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS DATE), INTERVAL -4 YEAR) AS STRING), ' ', CAST(TIME(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS TIMESTAMP)) AS STRING))) AS DATE), INTERVAL 5 YEAR) AS STRING), ' ', CAST(TIME(CAST(TIMESTAMP(CONCAT(CAST(DATE_ADD(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS DATE), INTERVAL -4 YEAR) AS STRING), ' ', CAST(TIME(CAST(TIMESTAMP_TRUNC(CAST(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %T', CURRENT_TIMESTAMP(), 'America/New_York')), DAY) AS TIMESTAMP), YEAR) AS TIMESTAMP)) AS STRING))) AS TIMESTAMP)) AS STRING)))), 'America/New_York')))))) AND (CAST(merchant_weekly.merchant_calendar_month AS INT64)  < 60) AND ((merchant.metro_id  IN ('CA-TOR', 'US-NYC', 'US-CHI', 'US-HOU', 'US-BOS', 'US-LAX', 'US-SFO', 'US-SEA', 'US-WAS'))) AND ((salesforce_account.brand_category__c  IN ('Independent', 'Independent Plus')))
+GROUP BY 1,2,3,4,5
