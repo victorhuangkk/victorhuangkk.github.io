@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: Victor Huang's Website
+title: Victor's Website
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: Something fun about Victor
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -21,11 +21,10 @@ description: A virtual proof that I'm awesome
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Tidyverse: "https://www.tidyverse.org/"
-    - A/B Test Framework: "https://guanhua-huang.shinyapps.io/ritual_a_b_test/"
-    - XArray: "http://xarray.pydata.org/en/stable/"
-  Ritual: "https://ritual.co/"
+  Related Links:
+    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+  Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -69,11 +68,10 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: false
-  email: "victorhuangkk@g.ucla.edu"
+  email: "victorhuangkk@gmail.com"
   facebook: victorhuangkk
   github: victorhuangkk
-  wechat: victorhuangkk
-#  twitter: victorhuangkk
+#  twitter: daattali
 #  reddit: yourname
   linkedin: victorhuangkk
 #  xing: yourname
@@ -89,10 +87,9 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: false
+  twitter: true
   facebook: true
   linkedin: true
-   wechat: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
@@ -159,7 +156,7 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "Canada/Toronto"
+timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
