@@ -49,7 +49,7 @@ Different from post on Looker's official site, product team at Ritual prefer to 
 
 And in order to calculate exact p-value for different sample size, BigQuery UDF was implemented. T-Score would be calculated in Looker by built-in function. Then, a javascript function would be applied to calculate the real p-value.
 
-```javascript
+~~~
 CREATE OR REPLACE FUNCTION `tscore`(a FLOAT64,
                                     b FLOAT64,
                                     c FLOAT64,
@@ -63,7 +63,7 @@ var sd = c;
 var n = d;
 return jStat.tscore( value, mean, sd, n );
 """;
-```
+~~~
 
 #### Step III
 
