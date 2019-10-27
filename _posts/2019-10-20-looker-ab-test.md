@@ -106,7 +106,7 @@ view: ab_test {
 
 # Based on current setup, different variables need separate development.
 
-# For rollout purposes, we need activation, 3rd week rentention and opu to be calculated. It might be easier to hard code different measures
+# For rollout purposes, we need activation, 3rd week rentention and metric_4 to be calculated. It might be easier to hard code different measures
 # than use liquid variable and set up individual calculation in the current stage.
 
   parameter: metric_selector {
@@ -134,113 +134,27 @@ view: ab_test {
     sql: ${TABLE}.user_id ;;
   }
 
-# 3rd week retention
-  measure: total_week_3_users {
-    label: "Total Users | Week 3 Rentention"
-    type: count_distinct
-    filters: {
-      field: user_weekly.user_week
-      value: "3"
-    }
-    sql:user_weekly.user_id ;;
-  }
 
-  measure: active_week_3_users {
-    label: "Active Users | Week 3 Rentention"
-    type: count_distinct
-    filters: {
-      field: user_weekly.is_weekly_active_user_in_period
-      value: "yes"
-    }
-    filters: {
-      field: user_weekly.user_week
-      value: "3"
-    }
-    sql: user_weekly.user_id;;
-  }
-
-# opu
-  measure: total_activated_users {
-    label: "All Activated Users | OPU"
-    type: count_distinct
-    sql: user_weekly.user_id ;;
-    filters: {
-      field: user_weekly.user_post_activation
-      value: "yes"
-    }
-  }
-
-  measure: total_orders_in_week {
-    label: "All Orders In the Given Week | OPU"
-    type: sum_distinct
-    sql: user_weekly.orders_in_week ;;
-    sql_distinct_key: CONCAT(user_weekly.user_id, CAST(user_weekly.week AS STRING)) ;;
-  }
-
-
-  # 7 day activation
-
-  # need to be cleaned up, should use previous explore related stuff instead of aggregation from scratch.
-  measure: new_signups {
-    label: "All New Signups | 7 Day Activation"
-    description: "Count distinct User IDs who signup with valid email, and not a guest"
-    type: count_distinct
-    sql: client_user_v2.user_id ;;
-    filters: {
-      field: client_user_v2.signup_timestamp_date
-      value: "after 2004/01/01"
-    }
-    filters: {
-      field: client_user_v2.email
-      value: "-NULL"
-    }
-    filters: {
-      field: client_user_v2.account_state
-      value: "-GUEST, -GUEST_SUSPENDED"
-    }
-  }
-
-
-  measure: activations_within_7_days {
-    label: "Activation Within 7 Days | 7 Day Activation"
-    description: "Count distinct User IDs where their first purchase was within 7 days of signing up"
-    type: count_distinct
-    sql: IF(TIMESTAMP_DIFF(client_user_v2.first_purchase_timestamp,
-             client_user_v2.signup_timestamp, HOUR) <= 7*24, client_user_v2.user_id, null) ;;
-    filters: {
-      field: client_user_v2.account_state
-      value: "-GUEST, -GUEST_SUSPENDED"
-    }
-    filters: {
-      field: client_user_v2.first_purchase_timestamp_date
-      value: "after 2004/01/01"
-    }
-
-  }
-
-  # 30 day RO return
-
+# example
 
   measure: num_merchant_users_through_window_a {
-    label: "Total Number of RO Users Merchant Pair | 30 Day RO Return"
-     type: number
-    sql: ${first_visit_order.num_merchant_users_through_window_a} ;;
+     type: count_distinct
+     sql: {Table}.
 
   }
 
   measure: distinct_merchant_users {
-    label: "RO Returned User Merchant Pair| 30 Day RO Return"
-    type: number
+    type: count_distinct
     sql: ${order_1.distinct_merchant_users};;
   }
 
 
   measure: variable_mean {
     type: number
-    sql: CASE WHEN {% parameter metric_selector %} = '3_week_retention' THEN ${active_week_3_users}/${total_week_3_users}
-              WHEN {% parameter metric_selector %} = '7_day_activiation' THEN ${activations_within_7_days}/${new_signups}
-              WHEN {% parameter metric_selector %} = '30_day_ro_return' THEN SAFE_DIVIDE(${distinct_merchant_users}, ${num_merchant_users_through_window_a})
-              WHEN {% parameter metric_selector %} = 'opu' THEN SAFE_DIVIDE(${total_orders_in_week}, ${total_activated_users})
+    sql: CASE WHEN {% parameter metric_selector %} = 'metric_1' THEN ${active_week_3_users}/${total_week_3_users}
+              WHEN {% parameter metric_selector %} = 'metric_2' THEN ${activations_within_7_days}/${new_signups}
+              WHEN {% parameter metric_selector %} = 'metric_3' THEN SAFE_DIVIDE(${distinct_merchant_users}, ${num_merchant_users_through_window_a})
+              WHEN {% parameter metric_selector %} = 'metric_4' THEN SAFE_DIVIDE(${total_orders_in_week}, ${total_activated_users})
               END;;
     value_format: "0.0000"
   }
@@ -248,10 +162,10 @@ view: ab_test {
 
   measure: variable_standard_deviation{
     type: number
-    sql: CASE WHEN {% parameter metric_selector %} = '3_week_retention' THEN ${variable_mean} * (1-${variable_mean})
-              WHEN {% parameter metric_selector %} = '7_day_activiation' THEN ${variable_mean} * (1-${variable_mean})
-              WHEN {% parameter metric_selector %} = '30_day_ro_return' THEN ${variable_mean} * (1-${variable_mean})
-              WHEN {% parameter metric_selector %} = 'opu' THEN STDDEV(user_weekly.orders_in_week)
+    sql: CASE WHEN {% parameter metric_selector %} = 'metric_1' THEN ${variable_mean} * (1-${variable_mean})
+              WHEN {% parameter metric_selector %} = 'metric_2' THEN ${variable_mean} * (1-${variable_mean})
+              WHEN {% parameter metric_selector %} = 'metric_3' THEN ${variable_mean} * (1-${variable_mean})
+              WHEN {% parameter metric_selector %} = 'metric_4' THEN STDDEV(user_weekly.orders_in_week)
          END;;
     value_format: "0.0000"
   }
@@ -277,23 +191,23 @@ view: ab_test {
 
   measure: t_score {
     type: number
-    sql:CASE WHEN {% parameter metric_selector %} = '3_week_retention'
+    sql:CASE WHEN {% parameter metric_selector %} = 'metric_1'
              THEN (${variable_mean} - ${con_avg}) /
                   SQRT(
                   (POWER(${variable_standard_deviation},2) / ${total_week_3_users}) + (POWER(${con_std},2) / ${con_size})
                   )
-            WHEN {% parameter metric_selector %} = '7_day_activiation'
+            WHEN {% parameter metric_selector %} = 'metric_2'
             THEN (${variable_mean} - ${con_avg}) /
                   SQRT(
                   (POWER(${variable_standard_deviation},2) / ${new_signups}) + (POWER(${con_std},2) / ${con_size})
                   )
-            WHEN {% parameter metric_selector %} = '30_day_ro_return'
+            WHEN {% parameter metric_selector %} = 'metric_3'
             THEN (${variable_mean} - ${con_avg}) /
                   SQRT(
                   (POWER(${variable_standard_deviation},2) / ${num_merchant_users_through_window_a}) + (POWER(${con_std},2) / ${con_size})
                   )
 
-            WHEN {% parameter metric_selector %} = 'opu'
+            WHEN {% parameter metric_selector %} = 'metric_4'
             THEN (${variable_mean} - ${con_avg}) /
                   SQRT(
                   (POWER(${variable_standard_deviation},2) / ${total_activated_users}) + (POWER(${con_std},2) / ${con_size})
@@ -306,10 +220,10 @@ view: ab_test {
     label: "p value"
     description: "In general, the smaller p value is is, the stronger conclusion we can make"
     type: number
-    sql: CASE WHEN {% parameter metric_selector %} = '3_week_retention' THEN redash488.Victor.ttest(${t_score}, ${total_week_3_users})
-              WHEN {% parameter metric_selector %} = '7_day_activiation' THEN redash488.Victor.ttest(${t_score}, ${new_signups})
-              WHEN {% parameter metric_selector %} = '30_day_ro_return' THEN redash488.Victor.ttest(${t_score}, ${num_merchant_users_through_window_a})
-              WHEN {% parameter metric_selector %} = 'opu' THEN redash488.Victor.ttest(${t_score}, ${total_activated_users})
+    sql: CASE WHEN {% parameter metric_selector %} = 'metric_1' THEN redash488.Victor.ttest(${t_score}, ${total_week_3_users})
+              WHEN {% parameter metric_selector %} = 'metric_2' THEN redash488.Victor.ttest(${t_score}, ${new_signups})
+              WHEN {% parameter metric_selector %} = 'metric_3' THEN redash488.Victor.ttest(${t_score}, ${num_merchant_users_through_window_a})
+              WHEN {% parameter metric_selector %} = 'metric_4' THEN redash488.Victor.ttest(${t_score}, ${total_activated_users})
          END;;
     value_format: "0.0000"
   }
