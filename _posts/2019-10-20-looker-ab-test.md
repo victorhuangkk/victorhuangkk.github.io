@@ -2,6 +2,7 @@
 layout: post
 title: Looker A/B test
 tags: [product, experiment]
+comments: true
 ---
 
 Currently, most Internet based companies are conducting A/B tests. For example, Uber loves to use A/B test to roll out new features, Facebook uses the in-house A/B test system to check the success of marketing campaign. At Ritual, we are conducting statistical test backed A/B test analysis to rollout products and improve our marketing strategies.
@@ -41,7 +42,7 @@ To conduct frequentist parametric statistical analysis related to mean, four par
   - Binomial Distribution: p(1-p)
   - Other than Binomial Distribution: Calculated by Google BigQuery's
 
-Then all parameters are stored in Looker available for
+Then all parameters are stored in Looker available for later calculations.
 
 #### Step II
 
@@ -67,28 +68,29 @@ return jStat.tscore( value, mean, sd, n );
 
 #### Step III
 
-Ask user to input calculated mean
+Ask user to input calculated mean, sample size and calculated standard deviation. The following are Looker parameters. Then, corresponding measures are created for pairwise comparison.
 
 ```
-measure: con_size {
+parameter: control_average {
+  label: "Please Input the Calculated Control Group Mean"
   type: number
-  hidden: yes
-  sql: ( parameter control_group_size ) ;;
+  default_value: "-0.01"
 }
 
-measure: con_avg {
+parameter: control_group_size {
+  label: "Please Input the Calculated Control Group Size"
   type: number
-  hidden: yes
-  sql: ( parameter control_average ) ;;
+  default_value: "-10"
 }
 
-measure: con_std {
+parameter: control_std {
+  label: "Please Input the Calculated Control Group Standard Deviation"
   type: number
-  hidden: yes
-  sql: ( parameter control_std ) ;;
+  default_value: "-0.01"
 }
 ```
 
+Complete code is shared here for your reference.
 
 #### Code
 
@@ -226,11 +228,9 @@ view: ab_test {
 
   measure: significance {
     label: "Statistical-Business Interpretation"
-    # assume > 1000 data points in the sample, and p values are hard coded for the ease of use.
     sql:
       CASE
-       WHEN ${total_week_3_users} <= 100 OR ${total_activated_users} <= 100 OR ${new_signups} <= 100 OR ${num_merchant_users_through_window_a} <= 100
-             THEN 'Be Careful, Not Enough Data Points'
+       WHEN con_size = -10 OR con_avg = -0.1 OR con_std = -0.1 THEN "Please add calculated control group parameters to the system!"
        WHEN ABS(${t_test}) <= 0.0005 THEN"Very strong believe those two groups are different"
        WHEN ABS(${t_test}) <= 0.001 THEN '0.001 sig. level'
        WHEN ABS(${t_test}) <= 0.005 THEN '0.005 sig. level'

@@ -2,6 +2,7 @@
 layout: post
 title: Merchant Lifetime Value Analysis
 tags: [marketing, statistics]
+comments: true
 ---
 
 # Customer Lifetime Value
@@ -25,7 +26,7 @@ From the L(y) value we inferred the following:
 - A(y): Fraction of merchants who left prior to their yth month.
 - R(y): Fraction of customers still with with in their yth month.
 
-In this problem, we adapted a relatively new approach since we knew the merchant churning months by month. For that reason, moving forward is easier than moving backward in retail/subscription based industry at Ritual. In the table below, I showed how to adjust profit margin by churn rate. Based on industry objective, profit margin was not discounted. 
+In this problem, we adapted a relatively new approach since we knew the merchant churning months by month. For that reason, moving forward is easier than moving backward in retail/subscription based industry at Ritual. In the table below, I showed how to adjust profit margin by churn rate. Based on industry objective, profit margin was not discounted.
 
 # Objective:
 
