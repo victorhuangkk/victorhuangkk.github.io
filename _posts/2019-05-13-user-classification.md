@@ -7,7 +7,7 @@ comments: true
 ---
 
 ## Motivation
-
+To make product decisions, product managers need to understand user's behavior in their different tenure stages. For example, 
 
 
 ## Data
