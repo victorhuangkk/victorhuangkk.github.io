@@ -5,11 +5,17 @@ tags: [product, experiment]
 comments: true
 ---
 
-Currently, most Internet based companies are conducting A/B tests. For example, Uber loves to use A/B test to roll out new features, Facebook uses the in-house A/B test system to check the success of marketing campaign. At Ritual, we are conducting statistical test backed A/B test analysis to rollout products and improve our marketing strategies.
+Currently, most Internet based companies are conducting A/B tests in marketing and product teams. For example, [Uber](https://eng.uber.com/xp/) use A/B test to roll out new features, [Facebook](https://facebook.github.io/planout/) uses the in-house A/B test system to check the success of marketing campaign and [Netflix](https://medium.com/netflix-techblog/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15) uses A/B test to increase user engagement. At Ritual, we are conducting statistical test backed A/B test analysis to rollout products and improve our marketing strategies.
 
-Based on our use cases, variables might be grouped into three categories, following binomial distribution, poisson distribution and gaussian distribution.
+Based on our use cases, variables might be grouped into three categories based on distributions, following binomial distribution, poisson distribution and gaussian distribution. Due to confidentiality issue, I cannot disclose real metrics here. But the following use cases are universal.
 
-One common mistake that people may make is to use aggregated mean to roll out features. It is not appropriate since variables follow drastically different distributions may share the same mean. And it is dangerous to conclude experiment based on a single parameter without any statistical tests. To make our life easier, T test might be the goto tool.
+- Case I: marketing team launches a new campaign and want to verify whether click through rate (CTR) has been changed by the new campaign.
+
+- Case II: Product teams launches a new feature to increase user engagement, which means spend more time on the APP. A/B test is required to test how many more minutes does a user spend on website.
+
+- Case III: Similar to case II but product teams' interest is how many times a day people log into the account. 
+
+To help product and marketing teams make data and statistics driven decisions, I centralized experimental analysis in Looker. One common mistake that people may make is to use aggregated mean to roll out features. It is not appropriate since variables follow drastically different distributions may share the same mean. And it is dangerous to conclude experiment based on a single parameter without any statistical tests. To make our life easier, T test might be the goto tool.
 
 ## Frequentist Approach
 

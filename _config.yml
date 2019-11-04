@@ -4,7 +4,7 @@
 title: Victor's Website
 
 # Short description of your site
-description: Something fun about Victor
+description: Something Fun About Victor
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -23,7 +23,8 @@ navbar-links:
   Victor's Resume: "aboutme"
   Related Links:
     - Uber Experimentation: "https://eng.uber.com/xp/"
-    - Uber Visualization: "https://kepler.gl/"
+    - Uber Map Visualization: "https://kepler.gl/"
+    - R Data Analysis: "https://r4ds.had.co.nz/"
     - Machine Learning: "https://stanfordmlgroup.github.io/"
   Ritual: https://ritual.co/
 
