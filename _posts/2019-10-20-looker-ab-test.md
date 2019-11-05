@@ -13,9 +13,18 @@ Based on our use cases, variables might be grouped into three categories based o
 
 - Case II: Product teams launches a new feature to increase user engagement, which means spend more time on the APP. A/B test is required to test how many more minutes does a user spend on website.
 
-- Case III: Similar to case II but product teams' interest is how many times a day people log into the account. 
+- Case III: Similar to case II but product teams' interest is how many times a day people log into the account.
 
-To help product and marketing teams make data and statistics driven decisions, I centralized experimental analysis in Looker. One common mistake that people may make is to use aggregated mean to roll out features. It is not appropriate since variables follow drastically different distributions may share the same mean. And it is dangerous to conclude experiment based on a single parameter without any statistical tests. To make our life easier, T test might be the goto tool.
+To help product and marketing teams make data and statistics driven decisions, I centralized experimental analysis in Looker. Looker has the following advantages.
+
+- It connects with database directly and quickly calculate traditional metrics quickly.
+
+- Product and marketing teams' go-to place for statistical analysis.
+
+- Various built-in functions to calculate statistic for different parameters.
+
+In daily work, business people need rigorous statistical consulting, otherwise, data blind decisions might be made. One common mistake that people may make daily is to use aggregated mean. It is not appropriate since variables follow drastically different distributions may share the same mean. And it is dangerous to conclude experiment based on a single parameter without any statistical tests. To make our life easier, T test might be the best choice.
+
 
 ## Frequentist Approach
 
@@ -96,10 +105,15 @@ parameter: control_std {
 }
 ```
 
-Complete code is shared here for your reference.
+
+## Future Work
+There are multiple limitations for the current approach. Firstly, only very limited amount of tests could be applied. Since Looker's dimension accepts merely since input, it struggles to deal with array and list type of data structures. 
+
+
+
 
 #### Code
-
+Complete code is shared here for your reference.
 
 ```sql
 view: ab_test {
