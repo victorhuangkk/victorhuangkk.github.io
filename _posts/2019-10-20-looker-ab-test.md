@@ -28,23 +28,24 @@ In daily work, business people need rigorous statistical consulting, otherwise, 
 
 ## Frequentist Approach
 
-Regarding variables, the test are designed by normal distribution approximation. That is to say, instead of checking distribution itself, it is easier to look at parameters we are interested in.
+Regarding variables, the test are designed by normal distribution approximation. That is to say, instead of checking distribution itself, it is easier to look at parameters we are interested in. I read the Looker [official blog](https://help.looker.com/hc/en-us/articles/360023802373--Analytic-Block-AB-Testing-with-Statistical-Significance) about how to set up views for Looker a/b test. However, there are two limitations
+
+- It compares two groups one time. In our set-up, multiple tests would be conducted simultaneously.
+
+- Sample size is rigid since Looker cannot calculate exact p value based on specific t distribution.
 
 The current solution is, end users designate the baseline parameters and the framework would enable them to pivot by group of interests.
 
 
 ## Bayesian Approach
 
-Compared with frequentist approach, Bayesian statistics provided a more understandable approach to A/B tests analysis. In this approach, I used a little code block from Looker but it turns out this approach is relatively difficult.
-
-<img src="https://render.githubusercontent.com/render/math?math=z=\frac{\hat p_1-\hat p_2}{\sqrt{\hat p(1-\hat p)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}">
-
+Compared with frequentist approach, Bayesian statistics provided a more understandable approach to A/B tests analysis. Looker also provided a [guideline](https://discourse.looker.com/t/stats-table-calcs-comparing-rates-over-time-bonus-anomaly-detection/6079) about how to set up bayesian parametric test in Looker. In this approach, I used a little code block from Looker but it turns out this approach is relatively difficult. The main reason for this is that Bayesian inference require randomized sampling which Looker is not specialized at.
 
 
 ## Looker Implementation
 To rollout the system faster, BI tools, like Looker might be a better choice compared with programming approaches. I was inspired by multiple blog from Looker. Links are shared in the end.
 
-In general, to make the product as flexible as possible, liquid variables were used in this case. I decoupled step for explanation purposes.
+In general, to make the product as flexible as possible, liquid variables were used in this case. I decoupled steps for explanation purposes.
 
 #### Step I
 
@@ -56,6 +57,8 @@ To conduct frequentist parametric statistical analysis related to mean, four par
 - Sample Standard Deviation:
   - Binomial Distribution: p(1-p)
   - Other than Binomial Distribution: Calculated by Google BigQuery's
+
+<img src="https://render.githubusercontent.com/render/math?math=z=\frac{\hat p_1-\hat p_2}{\sqrt{\hat p(1-\hat p)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}">
 
 Then all parameters are stored in Looker available for later calculations.
 
@@ -85,7 +88,7 @@ return jStat.tscore( value, mean, sd, n );
 
 Ask user to input calculated mean, sample size and calculated standard deviation. The following are Looker parameters. Then, corresponding measures are created for pairwise comparison.
 
-```
+```sql
 parameter: control_average {
   label: "Please Input the Calculated Control Group Mean"
   type: number
@@ -107,7 +110,7 @@ parameter: control_std {
 
 
 ## Future Work
-There are multiple limitations for the current approach. Firstly, only very limited amount of tests could be applied. Since Looker's dimension accepts merely since input, it struggles to deal with array and list type of data structures. 
+There are multiple limitations for the current approach. Firstly, only very limited amount of tests could be applied. Since Looker's dimension accepts merely since input, it struggles to deal with array and list type of data structures. So, the next question would be how to efficiently deal with
 
 
 
