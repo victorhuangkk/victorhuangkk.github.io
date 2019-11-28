@@ -8,9 +8,11 @@ subtitle: Data scientist and Aspiring Statistician
 
 - I live in Toronto right now.
 
-- I am a data scientist at Ritual. Before joining this fast growing Toronto based startup, I got degrees at U Pitt and UCLA. During that period, I did multiple researches in theoretical chemistry and optimization's application in machine learning.
+- I am a data scientist at Ritual. Before joining this fast growing Toronto based startup, I got my bachelor's degree from University of Pittsburgh and Master's degree from UCLA.
 
-- I love :octocat:, R, Python. Love statistics and math. Love experimental design and Bayesian statistics.
+- I have around 3 years' research experience in theoretical chemistry and optimization's application in machine learning.
+
+- I love Python, R and :octocat:. Love statistics and math. Love experimental design and Bayesian statistics.
 
 - Still learn to code line by line. Hope to learn more about algorithm and distributed computing.
 
@@ -47,7 +49,7 @@ subtitle: Data scientist and Aspiring Statistician
 - Experimental analysis
 - Visualization
 - CODING
-
+- Packages: dplyr, ggplot2, Shiny, Dash, TensorFlow, Numpy, SciPy, Pandas, Matplotlib
 
 #### My Own Time
 

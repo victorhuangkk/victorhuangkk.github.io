@@ -1,4 +1,10 @@
-# Ritual Experimental Framework MVP
+---
+layout: post
+title: Ritual Experimental Framework MVP
+tags: [product, experiment]
+comments: true
+---
+
 
 To execute this app, please follow the entire repo and
 you need to set up the requirements in your local environment. The dependencies are from the standard Python scientific programming stack.
