@@ -57,34 +57,6 @@ Cache/Redis for data frame storage simplicity.
 design is used to enhance user experience and save computational
 resources.
 
-## Metrics
-
-### OPU (orders per user per week)
-
-This metric is suitable for existing and new users at the same time.
-
-### Retention Metric
-
-Product team may use 7 day / 3 week / 30 day retention rate to measure user retention.
-To align with current definition of this metric, the starting point is activation
-datetime.
-
-### Const Day Activation Rate
-
-This metric is for new users only. For that reason, all users' activation date
-and sign-up date must be in the experiment range. And in the end, 1/0 will
-be returned, indicating user activated or not.
-
-### Const Day RO Return Rate
-
-It measures ritual offer (ROPE) retention by calculating whether a user come back
-to the same merchant in a limited time period.
-
-### k-factor
-
-This is the referrer's multiplier. It measures how many successful (activated)
-referrals have been made.
-
 ### Generic Structure
 
 For simplicity, this process pass the same format to the next step. The format
