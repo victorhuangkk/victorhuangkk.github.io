@@ -14,6 +14,9 @@ comments: true
 
 1. Garmin GPS。把智利地图下载好。谷歌离线地图
 2. 所有行程单，多次备份
+3. 打印所有航空公司登机牌，否则会收费
+4. 查询当地实用信息
+5. 准备衣物，
 
 ## 12月20日
 
@@ -29,11 +32,45 @@ comments: true
 出发点：Santiago        
 目的地：Calama  
 
+租车信息：
+
+`Car Group: Hyundai Creta or similar
+Booking Reference Number: 616955154
+Supplier: Econorent
+
+Pick-up details:
+Country: Chile
+City: Calama
+Location: Calama Airport
+Date: 21 Dec 2019 12:00
+
+Drop-off details:
+Location: Calama Airport
+Date: 24 Dec 2019 12:00`
+
+
+之后租车前往目的地：San Pedro de Atacama
+
+
+住宿信息：Doña Juanita Cabaña 6,
+地址：Calama 469, San Pedro de Atacama, Antofagasta, Chile
+
+
 ## 12月22日
+
+
+住宿信息：Doña Juanita Cabaña 6,
+地址：Calama 469, San Pedro de Atacama, Antofagasta, Chile
+
+观星：8:30pm 至 10:30 pm
+地址：‎Tocopilla 392, San Pedro de Atacama, Región de Antofagasta
 
 
 ## 12月23日
 
+
+住宿信息：Doña Juanita Cabaña 6,
+地址：Calama 469, San Pedro de Atacama, Antofagasta, Chile
 
 ## 12月24日
 
@@ -54,6 +91,23 @@ comments: true
 出发点：Punta Arenas (PUQ)          
 目的地：Puerto Montt (PMC)
 
+
+租车 信息
+
+Car Group: Nissan X-Trail or similar
+Booking Reference Number: 657278750
+Supplier: Econorent
+
+Pick-up details:
+Country: Chile
+City: Puerto Montt
+Location: Puerto Montt Airport
+Date: 27 Dec 2019 17:00
+
+Drop-off details:
+Location: Santiago Airport
+Date: 1 Jan 2020 17:00
+
 ## 12月28日
 
 
@@ -67,3 +121,11 @@ comments: true
 
 
 ## 1月1日
+
+
+## 1月2日
+
+
+预定信息：
+
+所有的预定信息均被保存在Google Drive里。
