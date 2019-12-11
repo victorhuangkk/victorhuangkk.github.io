@@ -17,6 +17,7 @@ comments: true
 3. 打印所有航空公司登机牌，否则会收费
 4. 查询当地实用信息
 5. 准备衣物，
+6. 将所有时间相关信息导入Google Calendar。
 
 ## 12月20日
 
@@ -55,6 +56,7 @@ Date: 24 Dec 2019 12:00`
 住宿信息：Doña Juanita Cabaña 6,
 地址：Calama 469, San Pedro de Atacama, Antofagasta, Chile
 
+注意：需要在Calama购买食物，
 
 ## 12月22日
 
@@ -80,21 +82,28 @@ Date: 24 Dec 2019 12:00`
 中转：Santiago      
 目的地：Punta Arenas
 
+住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
+
 ## 12月25日
 
-
+住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 ## 12月26日
 
+住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
+
+从蓬塔阿雷纳斯乘船游览马格达莱纳岛企鹅：  
+`Passenger must be at 06:30 at JOSE NOGUEIRA #1255, Punta Arenas`
 
 ## 12月27日
+
+
 飞行代码为：SNGPCP。起飞时间为 8:55am。航空公司：Sky Airlines          
 出发点：Punta Arenas (PUQ)          
 目的地：Puerto Montt (PMC)
 
 
-租车 信息
-
-Car Group: Nissan X-Trail or similar
+租车信息
+`Car Group: Nissan X-Trail or similar
 Booking Reference Number: 657278750
 Supplier: Econorent
 
@@ -107,23 +116,38 @@ Date: 27 Dec 2019 17:00
 Drop-off details:
 Location: Santiago Airport
 Date: 1 Jan 2020 17:00
+`
+
+住宿：Llantén, Puerto Montt, Región de los Lagos, Chile
+
+推荐：Osorno
 
 ## 12月28日
 
-
+住宿地址：Maipú 44, Concepción, Región del Bío Bío, Chile
 ## 12月29日
 
 
+住宿：EL GRANERO Depto. rústico alternativo tipo Loft
 ## 12月30日
 
 
+
+住宿地址：Rodríguez 99, Valparaíso, Valparaíso, Región de Valparaíso, Chile
 ## 12月31日
 
 
+
+住宿地址：28 Dardignac 1001 B, Recoleta, Región Metropolitana 8420525, Chile
+
 ## 1月1日
 
+住宿地址：28 Dardignac 1001 B, Recoleta, Región Metropolitana 8420525, Chile
 
 ## 1月2日
+
+住宿地址：28 Dardignac 1001 B, Recoleta, Región Metropolitana 8420525, Chile
+
 
 
 预定信息：
