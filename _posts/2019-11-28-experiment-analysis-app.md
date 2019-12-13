@@ -113,6 +113,8 @@ like what's underlying sample distribution looks like. I believe most of the cas
 even without detailed statistical test, business users/data scientists will be able to
 conclude accordingly.
 
+- Box Plot: display metric population in each group. 
+
 
 ## Future Plans
 

@@ -87,6 +87,9 @@ Date: 24 Dec 2019 12:00`
 ## 12月25日
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
+
+百内三塔：路程相对较远
+
 ## 12月26日
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
