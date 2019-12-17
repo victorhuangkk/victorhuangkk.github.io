@@ -6,14 +6,29 @@ comments: true
 ---
 
 
+# Summary
 To execute this app, please follow the entire repo and
-you need to set up the requirements in your local environment. The dependencies are from the standard Python scientific programming stack.
+you need to set up the requirements in your local environment. The dependencies are from the standard Python scientific programming stack. To simplify frontend development process, I leveraged the open source Python dashboard called dash. And the structure is:
 
+```
++-- requirements.txt
++-- _src
++-- _data
++-- notebook
++-- _includes
+|   +-- footer.html
+|   +-- header.html
++-- qa_query
++-- test
++-- main.py
+```
+
+Here is a screen shot of the app frontend set up. 
+
+![image info](/img/app_screen_shot.png)
 ## Philosophy
 
 When performing A/B testing, we need to consider the effect of a treatment as a distribution and not just a single statistic of simple p-value.
-
-
 Various graphs about underlying metrics'
 distribution have been displayed in the user interface.
 
@@ -113,7 +128,7 @@ like what's underlying sample distribution looks like. I believe most of the cas
 even without detailed statistical test, business users/data scientists will be able to
 conclude accordingly.
 
-- Box Plot: display metric population in each group. 
+- Box Plot: display metric population in each group.
 
 
 ## Future Plans
