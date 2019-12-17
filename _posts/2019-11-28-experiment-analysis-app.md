@@ -6,16 +6,16 @@ comments: true
 ---
 
 
-# Summary
+## Summary
 To execute this app, please follow the entire repo and
 you need to set up the requirements in your local environment. The dependencies are from the standard Python scientific programming stack. To simplify frontend development process, I leveraged the open source Python dashboard called dash. And the structure is:
 
 ```
 +-- requirements.txt
-+-- _src
-+-- _data
++-- src
++-- data
 +-- notebook
-+-- _includes
++-- includes
 +-- qa_query
 +-- test
 +-- main.py
@@ -25,7 +25,7 @@ Here is a screen shot of the app frontend set up.
 
 ![image info](/img/app_screen_shot.png)
 
-All those two plots will be explained in detail later in the blog.
+All those two plots will be explained in detail later in the blog. 
 ## Philosophy
 
 When performing A/B testing, we need to consider the effect of a treatment as a distribution and not just a single statistic of simple p-value.
@@ -134,4 +134,4 @@ conclude accordingly.
 There are a few ongoing improvements related to this MVP.
 
 - Adding more metrics
-- Set up corresponding tables in database. Schedule CRON job to write to db on a half day basis. Otherwise the computation for this app will be slow in general. 
+- Set up corresponding tables in database. Schedule CRON job to write to db on a half day basis. Otherwise the computation for this app will be slow in general.

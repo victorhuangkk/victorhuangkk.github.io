@@ -4,8 +4,8 @@ title: Business Units Clustering
 tags: [expansion, machine learning]
 comments: true
 ---
-# Summary 
-For expansion purposes, we need to formulate business park and consolidate information about business park. The original query is provided by Galina and Victor & Dylan made a few modifications to optimize the approach.
+# Summary
+For expansion purposes, we need to formulate business park and consolidate information about business park. The original data is purchased from a third party data provider. 
 
 There limitations for previous approach are
 The generation of business park is not stable. Which means, the business park’s numbering and number of buildings in one business park may be different every time.
