@@ -58,7 +58,6 @@ Here are some need to be mentioned.
 
 ~~~
 set.seed(88)
-
 stratified_sample <- user_data %>%
   group_by(metro_id, channel, activated_year) %>%
   mutate(num_rows=n()) %>%

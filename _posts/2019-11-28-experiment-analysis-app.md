@@ -16,16 +16,16 @@ you need to set up the requirements in your local environment. The dependencies 
 +-- _data
 +-- notebook
 +-- _includes
-|   +-- footer.html
-|   +-- header.html
 +-- qa_query
 +-- test
 +-- main.py
 ```
 
-Here is a screen shot of the app frontend set up. 
+Here is a screen shot of the app frontend set up.
 
 ![image info](/img/app_screen_shot.png)
+
+All those two plots will be explained in detail later in the blog.
 ## Philosophy
 
 When performing A/B testing, we need to consider the effect of a treatment as a distribution and not just a single statistic of simple p-value.
@@ -100,9 +100,7 @@ To better understand different metric, a distribution summary is provided
 ### Bootstrap
 
 To infer the percentage change between experimental group and
-control group, bootstrap method was applied here. To increase computational
-efficiency, I used two dimensional np.random.choice method. After creating
-distribution for lift, interval estimate could be constructed.
+control group, bootstrap method was applied here. To increase computational efficiency, I used facebook's Python bootstrap library.
 
 
 ### Point Estimate
@@ -136,6 +134,4 @@ conclude accordingly.
 There are a few ongoing improvements related to this MVP.
 
 - Adding more metrics
-- Writing unit test to provide software confidence
-- Testing other statistical tests to provide business insights
-and statistical support to data science team
+- Set up corresponding tables in database. Schedule CRON job to write to db on a half day basis. Otherwise the computation for this app will be slow in general. 
