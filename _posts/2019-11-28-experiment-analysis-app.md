@@ -7,8 +7,7 @@ comments: true
 
 
 ## Summary
-To execute this app, please follow the entire repo and
-you need to set up the requirements in your local environment. The dependencies are from the standard Python scientific programming stack. To simplify frontend development process, I leveraged the open source Python dashboard called dash. And the structure is:
+To simplify data science work and level up statistical rigor, I developed this experimentation analysis web application at Ritual. To simplify frontend development process, I leveraged the open source Python dashboard called dash. And the structure is:
 
 ```
 +-- requirements.txt
@@ -26,6 +25,7 @@ Here is a screen shot of the app frontend set up.
 ![image info](/img/app_screen_shot.png)
 
 All those two plots will be explained in detail later in the blog.
+
 ## Philosophy
 
 When performing A/B testing, we need to consider the effect of a treatment as a distribution and not just a single statistic of simple p-value.
@@ -99,7 +99,7 @@ control group, bootstrap method was applied here. To increase computational effi
 
 ### Point Estimate
 
-To calculate p value by bootstrap, users will be asked for metrics' value they want to consider. And the underlying null hypothesis becomes two groups difference is not greater than the designated value. And theoretically, the output p-value is the exact p-value. 
+To calculate p value by bootstrap, users will be asked for metrics' value they want to consider. And the underlying null hypothesis becomes two groups difference is not greater than the designated value. And theoretically, the output p-value is the exact p-value.
 
 ### Descriptive Statistics
 
