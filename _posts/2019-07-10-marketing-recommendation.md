@@ -6,11 +6,17 @@ comments: true
 ---
 
 # Motivation
-In order to move all the key metrics up,
-
+In order to provide personalized recommendations to increase click-through-rate and potentially increase final purchase rate at Ritual, we decided to develop a recommendation v1 for the marketing team.
 
 # Association Rule
 
+Depending on previous researching and applications, association rule is one of the most common data mining strategy used. It is simple and easy to interpret. In order to extract more valid rules and overcome sparsity of user merchants association matrix, I execute the code in various periods to figure out more rules. And there are a few ways to create the association:
+
+1. Association between user and merchant. assuming monthly purchase is a same bucket. It uses the similar manner of market basket analysis
+
+2. Association between item and user. This approach is more granular and potentially provide more business contexts
+
+Rather than simple association rule, matrix factorization might be a potential solution. However, the difficulty comes with sparsity, which means, one user may consume in handful amount of merchants. Compared with data collected by YouTube or Netflix, whom can leverage the power of neural network, simplified approach might be more appropriate in this case. 
 
 # Convex Optimization
 
