@@ -86,7 +86,10 @@ Date: 24 Dec 2019 12:00`
 
 ## 12月25日
 
-住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
+住宿地址：
+Refugio Laguna Amarga
+Kl 118, Lote 33 , Torres del Paine Comuna de Cerro Castillo, Torres del Paine, 6160000, Chile
+Phone: +56 61 241 0094
 
 百内三塔：路程相对较远
 
@@ -94,8 +97,6 @@ Date: 24 Dec 2019 12:00`
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 
-从蓬塔阿雷纳斯乘船游览马格达莱纳岛企鹅：  
-`Passenger must be at 06:30 at JOSE NOGUEIRA #1255, Punta Arenas`
 
 ## 12月27日
 
