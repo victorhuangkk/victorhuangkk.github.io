@@ -84,14 +84,20 @@ Date: 24 Dec 2019 12:00`
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 
+
+要到达房子，有几种选择，最快的是在海滨，到加油站前经过Alessandri，然后向右转，直到到达交通信号灯，然后由Manuel Rodriguez左转，直到到达Castro街，然后在那条街上右转直到到达Patagona并左转。这房子有自己的停车场。
+
 ## 12月25日
+
 
 住宿地址：
 Refugio Laguna Amarga
 Kl 118, Lote 33 , Torres del Paine Comuna de Cerro Castillo, Torres del Paine, 6160000, Chile
 Phone: +56 61 241 0094
 
-百内三塔：路程相对较远
+百内三塔：Sector Lago Grey S/N, Torres del
+Paine, Torres de Paine, Magallanes,
+Chile. 必须在下午两点之前到达集合地点
 
 ## 12月26日
 
@@ -122,7 +128,8 @@ Location: Santiago Airport
 Date: 1 Jan 2020 17:00
 `
 
-住宿：Llantén, Puerto Montt, Región de los Lagos, Chile
+住宿：Cabaña Rústica Patagonia Chilena,
+Coñaripe Alto, Conaripe, Los Ríos, Chile
 
 推荐：Osorno
 
