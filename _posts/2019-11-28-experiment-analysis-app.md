@@ -122,6 +122,11 @@ conclude accordingly.
 - Box Plot: display metric population in each group.
 
 
+## Deployment
+
+The dash framework is exported as a flask app and a corresponding Docker image has been built for this app. Then, all internal users have access to the app by IP address checking
+
+
 ## Future Plans
 
 There are a few ongoing improvements related to this MVP.

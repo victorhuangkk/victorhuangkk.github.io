@@ -5,8 +5,9 @@ tags: [python, finance]
 comments: true
 ---
 
+## Motivation
+To execute 
 
 ## Summary
-
 
 ## Methodology
