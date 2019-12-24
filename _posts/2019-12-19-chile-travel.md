@@ -21,7 +21,7 @@ comments: true
 
 ## 12月20日
 
-大概当地时间一点到达智利首都，圣地亚哥。
+大概当地时间两点到达智利首都，圣地亚哥。
 可以安排参观首都的武器广场，市场或动物园。
 
 住宿信息：San Isidro 337, Santiago, Región Metropolitana, Chile
@@ -77,10 +77,16 @@ Date: 24 Dec 2019 12:00`
 ## 12月24日
 
 
-飞行代码为：WDZT9H。起飞时间为13:46。航空公司：JetSmart, Sky Airline      
+飞行代码为：J7VTXW。起飞时间为13:00。航空公司：JetSmart,   
 出发点：Calama       
-中转：Santiago      
+中转：Santiago    
+
+Sky Airline: MU7WY5。起飞时间为18:30。航空公司：JetSmart
+出发点：Santiago
 目的地：Punta Arenas
+
+
+
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 
