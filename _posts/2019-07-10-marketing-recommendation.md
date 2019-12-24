@@ -6,13 +6,13 @@ comments: true
 ---
 
 # Motivation
-In order to provide personalized recommendations to increase click-through-rate and potentially increase final purchase rate at Ritual, we decided to develop a recommendation v1 for the marketing team.
+In order to provide personalized recommendations to increase click-through-rate and potentially increase final purchase rate at Ritual, the data science team decided to develop a recommendation v1 for the marketing team.
 
 # Association Rule
 
-Depending on previous researching and applications, association rule is one of the most common data mining strategy used. It is simple and easy to interpret. In order to extract more valid rules and overcome sparsity of user merchants association matrix, I execute the code in various periods to figure out more rules. And there are a few ways to create the association:
+Depending on researches online, association rule is one of the most common data mining strategies and it provided some marketing insights. It is simple and easy to interpret (compared with matrix decomposition). In order to extract enough rules from our data, I used monthly order data instead of all order history. And there are a few ways to create the association:
 
-1. Association between user and merchant. assuming monthly purchase is a same bucket. It uses the similar manner of market basket analysis
+1. Association between users and merchants. Assuming monthly purchase is a one bucket and create multiple buckets for one user by considering multiple months.
 
 2. Association between item and user. This approach is more granular and potentially provide more business contexts
 
@@ -24,7 +24,7 @@ After association rules being prepared, a convex optimization problem is needed 
 
 To simplify the development process, we need a proper framework to set it up. I used a Python package called cvxpy, which provided an easy to formulate convex optimization. One major advantage is that the package doesn't require constraints to be in matrix format but accept list format as well.
 
-After the mixed integer optimization problem being set-up, we used the commercial solver, Gurobi, to solve the mixed integer problem. And the outputs were used for personalized emails by marketing team. 
+After the mixed integer optimization problem being set-up, we used the commercial solver, Gurobi, to solve the mixed integer problem. And the outputs were used for personalized emails by marketing team.
 
 # Metrics
 ### support:

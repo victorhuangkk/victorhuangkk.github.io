@@ -86,8 +86,6 @@ Sky Airline: MU7WY5。起飞时间为18:30。航空公司：JetSmart
 目的地：Punta Arenas
 
 
-
-
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 
 
