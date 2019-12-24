@@ -6,12 +6,7 @@ tags: [product, data]
 comments: true
 ---
 
-Product managers are in the center of an Internet based company. However, it is relatively difficult to judge a product person's ability. In my daily job, I worked with multiple product managers extensively. Helping them pull data from various data sources, conducting statistical analysis and make product related decisions. So, based on my understanding, product is really the center of a company. Someone may believe data is the new trend since traditional product development is subjective. However, I would argue that data may be misleading some time. I would like to decouple the product life cycle in multiple stages and how data get involved in different steps.
-
-
-## Opportunity Discovery
-
-Designing a product is very tricky and takes energy. For example, how to increase user retention on the platform requires  
+Product managers are in the center of an Internet based company. As a data analyst, you may work with them on a daily basis. But how to conduct high quality statistical data analysis need time. I would love to share some of my previous experience and mistakes to help other analysts grow faster. 
 
 
 ## Data Analysis Workflow
@@ -42,7 +37,20 @@ That is to say, you need to provide `analyst's view` rather than following their
 
 
 ### More work and Report
-After deciding which way to go make sure everyone is on the same page, the analysts will start the real work 
+After deciding which way to go make sure everyone is on the same page, the analysts will start the real work. I do believe methodologies are more important the specific languages. You may use `R`, `Python`, `Julia` or even `Scala` if you choose the suitable approaches.
+
+I believe data analysis is a combination of art, science and engineering. You should use your creativity you find meaningful approaches. After that, you have to follow rigorous statistics guidelines to generate results. In the very end, you have to choose clear visualizations to tell a thoughtful story.
+
+I would like to share more thoughts here. I do recommend use raw data compared with `backed` data. The reason behind it is that you may mess easily forget your underlying assumptions. Always remember what you are trying to answer and follow that.
+
+Regarding statistical data analysis, I would recommend every analyst to review introductory statistical inference textbook, some Bayesian analysis, regression analysis and experimental design. Those should enable you to conduct rigorous data analysis without violating statistics principles.
+
+In terms of visualization, I have the following recommendations.
+
+* Simple statistical graphs, use `ggplot2` or `seaborn`.
+* Interactive plot, use `plotly`
+* Geographical Data, use `kepler.gl`
+* Fancy Plot, `r2d3`, `d3.js`, `pyecharts`, `vega`
 
 
 ### Conclusion and Documentation
