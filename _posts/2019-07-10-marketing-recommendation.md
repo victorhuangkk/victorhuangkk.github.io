@@ -18,13 +18,15 @@ Depending on researches online, association rule is one of the most common data 
 
 Rather than simple association rule, matrix factorization might be a potential solution. However, the difficulty comes with sparsity, which means, one user may consume in handful amount of merchants. Compared with data collected by YouTube or Netflix, whom can leverage the power of neural network, simplified approach might be more appropriate in this case.
 
+For details about association rule, please refer to the Metrics section later. But in short, you should consider support, confidence, lift and leverage at the same time. But for specific business applications, you may choose one to use for optimization purposes.
+
 # MIP Optimization
 
-After association rules being prepared, a convex optimization problem is needed to satisfy business needs. For example, one users may except no more than 3 recommendations and one merchant may receive no more than 5 recommendations. And the objective function is the summation of utility in the association matrix.
+After association rules being prepared, a convex optimization problem is needed to satisfy business needs. In real cases, one email may not want to recommend overwhelming amount of restaurants to a user. And you may not direct all order volume to only one restaurant. To achieve this, objective function is the summation of utility in the association matrix and all business needs are implemented as constraints.
 
-To simplify the development process, we need a proper framework to set it up. I used a Python package called cvxpy, which provided an easy to formulate convex optimization. One major advantage is that the package doesn't require constraints to be in matrix format but accept list format as well.
+To simplify the development process, we need a proper framework to set it up. I used a Python package called `cvxpy`, which is an intuitive convex optimization framework. One major advantage is that  `cvxpy` doesn't require constraints to be in matrix format but accept list format as well.
 
-After the mixed integer optimization problem being set-up, we used the commercial solver, Gurobi, to solve the mixed integer problem. And the outputs were used for personalized emails by marketing team.
+After the mixed integer optimization problem being set-up, we used the commercial solver, Gurobi and CPLEX, to solve the mixed integer problem. And the outputs were used for personalized emails by marketing team.
 
 # Metrics
 ### support:
