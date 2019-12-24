@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Product Sense
-subtitle: Some product thoughts by a data scientist
+title: Data and Product
+subtitle: How to become a reliable data analyst
 tags: [product, data]
 comments: true
 ---
@@ -36,4 +36,4 @@ This step is crucial but get ignored by a handful amount of junior analysts. I m
 
 ### Exploratory Data Analysis
 
-In most cases, one question might be answered by multiple ways. For example, you may group users by acquisition time, region or acquisition channel for one experiment. 
+In most cases, one question might be answered by multiple ways. For example, you may group users by acquisition time, region or acquisition channel for one experiment.
