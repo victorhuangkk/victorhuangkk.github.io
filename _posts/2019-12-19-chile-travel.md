@@ -88,6 +88,8 @@ Sky Airline: MU7WY5。起飞时间为18:30。航空公司：JetSmart
 
 住宿地址：Patagona, Punta Arenas, Región de Magallanes y de la Antártica Chilena, Chile
 
+Patagona 4032, Valle Bicentenario
+
 
 要到达房子，有几种选择，最快的是在海滨，到加油站前经过Alessandri，然后向右转，直到到达交通信号灯，然后由Manuel Rodriguez左转，直到到达Castro街，然后在那条街上右转直到到达Patagona并左转。这房子有自己的停车场。
 
@@ -147,11 +149,8 @@ Coñaripe Alto, Conaripe, Los Ríos, Chile
 ## 12月30日
 
 
-
 住宿地址：Rodríguez 99, Valparaíso, Valparaíso, Región de Valparaíso, Chile
 ## 12月31日
-
-
 
 住宿地址：28 Dardignac 1001 B, Recoleta, Región Metropolitana 8420525, Chile
 

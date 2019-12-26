@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Classification
-subtitle: Model users' based on behavioral data  
+subtitle: Data driven user clustering
 tags: [machine learning, marketing]
 comments: true
 ---
@@ -24,7 +24,15 @@ To retrieve data, I composed corresponding SQL queries to fetch data from the da
 
 
 ## Exploratory Data Analysis
+In order to filter powerful predictors among all features, I used both linear regression and random forest to measure feature importance.
 
+## Methodology
+The end goal is to accurately group users together.
 
+## Delivery
 
-## Approaches
+After k-means aggregation being done, results were saved in a bigquery view and Looker view is built up accordingly. Data as user's order history and demographic features. The product team used this work to create multiple visualizations and it provides product insights regarding product changes.
+
+## Future Work
+
+* Test other clustering algorithm 
