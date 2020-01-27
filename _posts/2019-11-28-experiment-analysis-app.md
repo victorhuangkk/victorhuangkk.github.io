@@ -86,7 +86,13 @@ To better understand different metric, a distribution summary is provided
 | 4   | metric3     | Poisson      |
 | 5   | Activation  | Binomial     |
 
+
+## Concurrent Computation
+
+
+
 ## Statistical Analysis
+
 
 ### Bootstrap
 
@@ -100,6 +106,11 @@ control group, bootstrap method was applied here. To increase computational effi
 ### Point Estimate
 
 To calculate p value by bootstrap, users will be asked for metrics' value they want to consider. And the underlying null hypothesis becomes two groups difference is not greater than the designated value. And theoretically, the output p-value is the exact p-value.
+
+## Business And Statistical Analysis
+
+
+
 
 ### Descriptive Statistics
 
