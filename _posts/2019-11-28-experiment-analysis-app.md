@@ -109,7 +109,7 @@ To calculate p value by bootstrap, users will be asked for metrics' value they w
 
 ## Business And Statistical Analysis
 
-
+There are multiple ways of statistical data analysis, 
 
 
 ### Descriptive Statistics
