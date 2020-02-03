@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Victor
-subtitle: Data scientist and Aspiring Statistician
+subtitle: Data Scientist and Aspiring Statistician
 ---
 
 
@@ -10,13 +10,13 @@ subtitle: Data scientist and Aspiring Statistician
 Self-directed and driven data scientist with comprehensive accomplishments applying statistical modeling, machine learning and data visualization to ensure success and achieve goals. Known as an innovative thinker with strong SQL, Python, R acumen and Julia. Demonstrated success developing and seamlessly executing plans across complex data sets. Recognized for maximizing performance by implementing appropriate data mining strategies through analysis of details to gain understanding of the data structures, databases, relationships and business needs. Highly organized, creative problem solver who excels at producing business value by applying data science best practices to challenging problems.
 
 ### SKILL
-#### Programming:      
+#### Programming:
 Python, R, BigQuery, Julia, GCP, Spark, JavaScript.
 
-#### Algorithm:       
+#### Algorithm:
 Machine Learning, Database Management, Data structure and Algorithms.
 
-#### Business Intelligence:         
+#### Business Intelligence:    
 Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads.
 
 
@@ -50,7 +50,7 @@ July 2018 – December 2018
 
 **Algorithmic Trading**
 
-- Implemented algorithms in Quantopian and Zipline to back-test and trade stocks weekly based on volume-weighted average price (VWAP) and fundamental factors including Price/Earnings ratio and ROE (return on equity).
+- Implemented algorithms in _Quantopian_ and _Zipline_ to back-test and trade stocks weekly based on volume-weighted average price (VWAP) and fundamental factors including Price/Earnings ratio and ROE (return on equity).
 - Increased 46 % for the performance of the $8-billion portfolio based on the Sharpe ratio of weekly return compared with the current strategy.
 
 **Real-Time Stock Data Dashboard**
@@ -104,23 +104,23 @@ May 2016
  - Tree Ensemble Optimization
 _Manuscript under preparation to be submitted to Journal of Statistical Software._
 
-# PROJECTS
+### PROJECTS
  **Prototype Selection for Nearest Neighbor Classification**      
     - Implemented a relaxed integer program and random rounding algorithm in Python with _numpy_ and _cxvpy_ to identify prototype set, which is an NP-hard problem. Implemented the key components for the R package protoclass in Python with a greedy heuristic approach.       
     - Modified integer linear program&#39;s objective function and constraints to improve the efficiency and precision.
 
  **Merchant Lifetime Value System**    
       - Developed a lifetime value model in pure R by tenure analysis and stochastic process.          
-      - Implemented frontend Dashboard in ShinyR. Integrate with database by dbplyr and deployed on GCP.       
+      - Implemented frontend Dashboard in _ShinyR_. Integrate with database by _dbplyr_ and deployed on _GCP_.       
       - Provided product marketing team business insights and boost merchant closing rate by 50%.
 
  **Marketing Recommender System**      
-      - Use Python (Ibis) framework and Airflow to implement data pipelines.       
-      - Implemented microservices in Python to calculate user similarity score by Singular Value Decomposition (SVD).     
-      - Implemented Mixed Integer Programming by CVXPY and Gurobi.      
-      - Deployed the entire framework in GCP, sending customized email on a weekly manner, increase email open rate by 230%.
+      - Use Python (_Ibis_) framework and _Airflow_ to implement data pipelines.       
+      - Implemented microservices in Python to calculate user similarity score by Singular Value Decomposition (_SVD_).     
+      - Implemented Mixed Integer Programming by _cxvpy_ and _Gurobi_.      
+      - Deployed the entire framework in _GCP_, sending customized email on a weekly manner, increase email open rate by 230%.
 
  **Business Unit Clustering**      
       - Composed Google Bigquery query script to fetch and aggregate needed data.        
-      - Implemented Density-based spatial clustering of applications with noise(DBSCAN) in Python to accommodate business needs. The code was optimized to cluster ~200 K data points within 10 minutes.      
-      - Implemented a visualization web tool by integrating Kepler.gl and Python Dash to enable business users generate business insights.
+      - Implemented Density-based spatial clustering of applications with noise(_DBSCAN_) in Python to accommodate business needs. The code was optimized to cluster ~200 K data points within 10 minutes.      
+      - Implemented a visualization web tool by integrating [_Kepler.gl_](https://kepler.gl/) and Python _Dash_ to enable business users generate business insights.
