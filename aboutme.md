@@ -51,12 +51,12 @@ July 2018 – December 2018
 1. Algorithmic Trading
 
   - Implemented algorithms in _Quantopian_ and _Zipline_ to back-test and trade stocks weekly based on volume-weighted average price (VWAP) and fundamental factors including Price/Earnings ratio and ROE (return on equity).
-  - Increased 46 % for the performance of the $8-billion portfolio based on the Sharpe ratio of weekly return compared with the current strategy.
+  - Increased 46 % for the performance of the $8 billion portfolio based on the Sharpe ratio of weekly return compared with the current strategy.
 
 2. Real-Time Stock Data Analysis   
 
   - Led a four-people team by coordinating the group assignment, monitoring the project progress and presenting to the director of factor research in the organization every week.
-  - Implemented and enabled the calculation of the risk exposures, bid-ask spread and volume using more than 3TB&#39;s data from OneTick and MSCI.
+  - Implemented and enabled the calculation of the risk exposures, bid-ask spread and volume using more than 3TB&#39;s data from _OneTick_ and _MSCI_.
   - Developed a dashboard in Python(_flask_) and Javascript to display real time impact of news on stocks&#39; price and calculate the marginal utility.
   - Optimized the stock portfolios based on daily equity data with reinforcement learning and convex optimization.
 
