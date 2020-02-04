@@ -22,7 +22,7 @@ Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads.
 
 ### PROFESSIONAL EXPERIENCE
 
-Ritual.co      
+**Ritual.co**  
 Toronto, ON       
 Data Scientist         
 February 2019 – Present
@@ -34,7 +34,7 @@ February 2019 – Present
 - Build multiple machine learning models by TF-IDF and DBSCAN, clustered more than 100K business units.
 - Optimized the marketing funnels and boosted the in-bound leases from partnering merchants from 0 to 60-80 within one month.
 
-WeCloudData                
+**WeCloudData**                
 Toronto, ON        
 Part Time Instructor     
 August 2019 – Present
@@ -43,22 +43,22 @@ August 2019 – Present
 - Designed hands-on laboratory exercises.
 - Delivered interactive lectures by coding in Python and R.
 
-Los Angeles Capital Management
+**Los Angeles Capital Management**
 Los Angeles, CA, USA.**
 Research Analyst (Intern)     
 July 2018 – December 2018
 
-**Algorithmic Trading**
+1. Algorithmic Trading
 
-- Implemented algorithms in _Quantopian_ and _Zipline_ to back-test and trade stocks weekly based on volume-weighted average price (VWAP) and fundamental factors including Price/Earnings ratio and ROE (return on equity).
-- Increased 46 % for the performance of the $8-billion portfolio based on the Sharpe ratio of weekly return compared with the current strategy.
+  - Implemented algorithms in _Quantopian_ and _Zipline_ to back-test and trade stocks weekly based on volume-weighted average price (VWAP) and fundamental factors including Price/Earnings ratio and ROE (return on equity).
+  - Increased 46 % for the performance of the $8-billion portfolio based on the Sharpe ratio of weekly return compared with the current strategy.
 
-**Real-Time Stock Data Dashboard**
+2. Real-Time Stock Data Dashboard   
 
-- Led a four-people team by coordinating the group assignment, monitoring the project progress and presenting to the director of factor research in the organization every week.
-- Implemented and enabled the calculation of the risk exposures, bid-ask spread and volume using more than 3TB&#39;s data from OneTick and MSCI.
-- Developed a dashboard in Python to display real time impact of news on stocks&#39; price and calculate the marginal utility.
-- Optimized the stock portfolios based on daily equity data with reinforcement learning and convex optimization.
+  - Led a four-people team by coordinating the group assignment, monitoring the project progress and presenting to the director of factor research in the organization every week.
+  - Implemented and enabled the calculation of the risk exposures, bid-ask spread and volume using more than 3TB&#39;s data from OneTick and MSCI.
+  - Developed a dashboard in Python to display real time impact of news on stocks&#39; price and calculate the marginal utility.
+  - Optimized the stock portfolios based on daily equity data with reinforcement learning and convex optimization.
 
 UCLA Anderson School of Management     
 Los Angeles, CA, USA.    
