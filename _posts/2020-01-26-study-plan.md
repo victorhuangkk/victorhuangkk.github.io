@@ -56,6 +56,10 @@ Statistics
 14. 未来简史
 15. Capitalism in America: A History
 16. 中国的经济制度
+17. 贫穷的本质
+18. 见识（吴军）
+19. 历代经济变革得失
+20. Machine Learning and Pattern Recognition
 
 
 ## Summary:
