@@ -35,4 +35,4 @@ After k-means aggregation being done, results were saved in a bigquery view and 
 
 ## Future Work
 
-* Test other clustering algorithm 
+* Test other clustering algorithm
