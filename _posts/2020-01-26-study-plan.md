@@ -15,16 +15,18 @@ Some related website:
 
 2. [python and numpy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
 
+3. [machine learning math](https://www.bilibili.com/video/av70839977/?spm_id_from=333.788.videocard.0)
+
 
 ## Machine Learning
 Read through Li Hang's statistical learning method
 Derive machine learning algos from scratch.
 
-Singular Value Decomposition
+[Singular Value Decomposition](https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/book-chapter-4.pdf)
 
-Logistic Regression
+[Tree Model](https://xgboost.readthedocs.io/en/latest/tutorials/model.html)
 
-Tree Model
+[Generalized Linear Model](https://www.amazon.ca/Introduction-Generalized-Linear-Models-Fourth/dp/1138741515/)
 
 
 ## Algorithm
@@ -40,7 +42,10 @@ Probability Theory
 Statistics
 
 ## Book List
-1. 朱镕基讲话实录（4本）
+1. 朱镕基讲话实录 I
+1. 朱镕基讲话实录 II
+1. 朱镕基讲话实录 III (Done)
+1. 朱镕基讲话实录 IV
 2. 文明是副产品
 3. 金刚经，心经，坛经
 4. 国史大纲
@@ -57,7 +62,7 @@ Statistics
 15. Capitalism in America: A History
 16. 中国的经济制度
 17. 贫穷的本质
-18. 见识（吴军）
+18. 见识（吴军）(Done)
 19. 历代经济变革得失
 20. Machine Learning and Pattern Recognition
 
