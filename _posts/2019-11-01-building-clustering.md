@@ -12,7 +12,16 @@ In the very end, business team need all data to be accessible with BI tool and S
 
 ## Methodology
 
+
+There are multiple clustering algorithms on the counter:
+1. k-means
+2. GMM
+3. DBSCNA
+
+
 In short, the business question is to cluster buildings together by distance. In that case, DBCSAN (Density-based spatial clustering of applications with noise). It is a density-based clustering non-parametric algorithm: given a set of points in some space, it groups together points that are closely packed together (points with many nearby neighbors), marking as outliers points that lie alone in low-density regions. And in this case,
+
+
 
 ## Coding
 
