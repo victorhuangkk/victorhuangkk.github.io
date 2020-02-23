@@ -8,6 +8,8 @@ comments: true
 
 ## Summary
 
+This project is to create a self use stock selection and portfolio optimization strategy. One of the most effective and simple strategy  
+
 In general, investment is an art rather than pure science. I believe in the value investment strategy. From a tactic perspective,
 By utilizing a service called alpha_vantage (Python),
 
@@ -28,7 +30,7 @@ Another factor to ensure
   1. Gilead Science, Crisper
 - Defense
   1. Lockheed Martin
--
+
 
 
 ## Portfolio Optimization
@@ -39,6 +41,9 @@ But there are two rules which cannot be broken:
 1. Diversify portfolio as much as possible
 2. Never short the market
 
-I used a Python package to conduct portfolio optimization 
+I used a Python package to conduct portfolio optimization
+
+The mathematical formula for this optimization task is stated in below.
+ 
 
 ## Backtest
