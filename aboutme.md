@@ -11,13 +11,13 @@ Self-directed and driven data scientist with comprehensive accomplishments apply
 
 ### SKILL
 #### Programming:
-Python, R, BigQuery, Julia, GCP, AWS, Spark, JavaScript.
+Python, R, Scala, Java, Julia, GCP, AWS, Spark, JavaScript
 
 #### Computer Science:
-Machine Learning, Database Management, Data structure and Algorithms.
+Machine Learning, Database Management, Data structure and Algorithms
 
 #### Business Intelligence:    
-Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads.
+Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads
 
 
 ### PROFESSIONAL EXPERIENCE
@@ -39,9 +39,9 @@ Toronto, ON
 Part Time Instructor     
 August 2019 – Present
 
-- Covered statistical analysis techniques, including experiment design and industry level system implementation.
-- Designed hands-on laboratory exercises.
-- Delivered interactive lectures by coding in Python and R.
+- Covered statistical analysis techniques, including experiment design and industry level system implementation
+- Designed hands-on laboratory exercises
+- Delivered interactive lectures by coding in Python and R
 
 **Los Angeles Capital Management**     
 Los Angeles, CA, U.S.A     
