@@ -114,7 +114,7 @@ _Manuscript under preparation to be submitted to Journal of Statistical Software
 
  **Marketing Recommender System**      
       - Use Python (_Ibis_) framework and _Airflow_ to implement data pipelines.       
-      - Implemented microservices in Python to calculate user similarity score by Singular Value Decomposition (_SVD_).     
+      - Implemented micro-services in Python to calculate user similarity score by Singular Value Decomposition (_SVD_).     
       - Implemented Mixed Integer Programming by _cxvpy_ and _Gurobi_.      
       - Deployed the entire framework in _GCP_, sending customized email on a weekly manner, increase email open rate by 230%.
 

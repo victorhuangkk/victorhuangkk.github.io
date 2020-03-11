@@ -5,7 +5,11 @@ tags: [product, experiment]
 comments: true
 ---
 
-Currently, most Internet based companies are conducting A/B tests in marketing and product teams. For example, [Uber](https://eng.uber.com/xp/) use A/B test to roll out new features, [Facebook](https://facebook.github.io/planout/) uses the in-house A/B test system to check the success of marketing campaign and [Netflix](https://medium.com/netflix-techblog/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15) uses A/B test to increase user engagement. At Ritual, we are conducting statistical test backed A/B test analysis to rollout products and improve our marketing strategies.
+Currently, most Internet based companies are conducting A/B tests in marketing and product teams. For example,
+- [Uber](https://eng.uber.com/xp/) use A/B test to roll out new features,
+- [Facebook](https://facebook.github.io/planout/) uses the in-house A/B test system to check the success of marketing campaign and 
+- [Netflix](https://medium.com/netflix-techblog/its-all-a-bout-testing-the-netflix-experimentation-platform-4e1ca458c15) uses A/B test to increase user engagement.
+- At Ritual, we are conducting statistical test backed A/B test analysis to rollout products and improve our marketing strategies.
 
 Based on our use cases, variables might be grouped into three categories based on distributions, following binomial distribution, poisson distribution and gaussian distribution. Due to confidentiality issue, I cannot disclose real metrics here. But the following use cases are universal.
 
