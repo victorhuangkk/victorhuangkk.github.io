@@ -42,13 +42,19 @@ We may use multiple visualizations to extract totally different conclusions. For
 
 This problem might be solved easily by hard code parameters in SQL query and fetch data from database. However, rigorously, this is a convex optimization problem. You have multiple constrains and an objective function. My suggestion is to maximize cardinality of the number of users, subject to certain business requirements. This mathematical optimization problem could be solved in by various solvers in various languages. And the data preparation could be done in SQL. However, you may need one whole day to solve this problem compared with 2 hour query composition.
 
-My suggestion is, you may automate this process by providing a shiny/dash tool to collect business inputs -> fetch data -> optimization -> requested output
+My suggestion is, you may automate this process by providing a shiny/dash tool to collect business inputs -> fetch data -> optimization -> requested output. And in general, automated tooling should be planned and provided to each business teams to automate small tasks.
 
 #### Case 2
 
-This is a typical data analysis question but most likely analysts may end up with visualization. But my suggestion is to start from causal inference. Most likely there is no single factor driving the effect in which case you need model to estimate effect from each feature. For that reason, I would suggest generalized linear model for its interpretability. Even by applying linear model, you may still not be able to track 
+This is a typical data analysis question but most likely analysts may end up with visualization. But my suggestion is to start from causal inference. Most likely there is no single factor driving the effect in which case you need model to estimate effect from each feature. For that reason, I would suggest generalized linear model for its interpretability. Even by applying linear model, you may still not be able to easily measure cross effect by two factors. And in real world, especially in industry, causality is always an open ended question.
+
+There are various resources to help to quantify the causality but need detailed selection. To be honest, some time the analysis will end up to be visualization tasks and nothing but fancy plots will be provided. In most scenarios, I don't think that's the correct approach. Data != Statistics. In real world, things in front of you are just raw data but you need conclusions from them. You can simply calculate algorithmic mean and standard deviation to summarize data. But there might be outliers, the data might be skewed and higher order momentum might be totally different.
+
+As a statistical data analyst, your task is to conduct statistical tests to help business users understand the dat. So, find the suitable model -> apply the model by knowing underlying assumptions -> conclude with clear visualizations.
 
 #### Case 3
+
+From a technical perspective, this task is very similar to case 2. However, operational team may need better interpretability and walk-through. For that reason, analyst may need to embrace a big business picture
 
 ## Presentation
 
