@@ -54,8 +54,12 @@ As a statistical data analyst, your task is to conduct statistical tests to help
 
 #### Case 3
 
-From a technical perspective, this task is very similar to case 2. However, operational team may need better interpretability and walk-through. For that reason, analyst may need to embrace a big business picture
+From a technical perspective, this task is very similar to case 2. However, operational team may need better interpretability and walk-through. For that reason, analyst may need to embrace a big business picture before dive into analytical work. That is to say, you need to drive the analysis instead of business users. This sounds crazy but will save you tons of time later.
+
+From methodology perspective, you may need to adopt easier approaches for better interpretability since business users may not necessary have any statistical background. The effort from us is to push forward the rigor to enable them to make data driven decisions. Additionally, you should be aware that not everyone is aware of data limitations. So, part of your job is to help your 'clients' define their questions.
 
 ## Presentation
 
-After the analysis has been done, analyst is usually asked to present to business users. They may not necessary has any statistics and data background.
+After the analysis has been done, analysts are usually asked to present to business users. At this time, I would define the job as consultant. You are the salesman to ask high level people to buy your analysis/model. And in some other cases, they may already know the answer but need your expertise to endorse their ideas. In that case, be sure you know your data and work well since people will challenge you on unexpected aspects.
+
+And you should be a professional storyteller at this time. People would love to follow your logic and accept your findings. This process is similar to compose academic papers. You may start from a totally different direction but you need a vivid and logical story to persuade audiences. 
