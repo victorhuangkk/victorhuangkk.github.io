@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Victor
+title: Victor's Resume
 subtitle: Data Scientist and Aspiring Statistician
 ---
 
@@ -9,12 +9,12 @@ subtitle: Data Scientist and Aspiring Statistician
 
 Self-directed and driven data scientist with comprehensive accomplishments applying statistical modeling, machine learning and data visualization to ensure success and achieve goals. Known as an innovative thinker with strong Python, R acumen, SQL, JavaScript and Julia. Demonstrated success developing and seamlessly executing plans across complex data sets. Recognized for maximizing performance by implementing appropriate data mining strategies through analysis of details to gain understanding of the data structures, databases, relationships and business needs. Highly organized, creative problem solver who excels at producing business value by applying data science best practices to challenging problems.
 
-### SKILL
+### SKILLS
 #### Programming:
-Python, R, Scala, Java, Julia, GCP, AWS, Spark, JavaScript
+Python, R, Scala, Java, Julia, Spark, JavaScript
 
 #### Computer Science:
-Machine Learning, Database Management, Data structure and Algorithms
+Machine Learning, Database Management, Data structures and Algorithms
 
 #### Business Intelligence:    
 Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads
@@ -23,9 +23,9 @@ Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads
 ### PROFESSIONAL EXPERIENCE
 
 **Ritual.co**  
-Toronto, ON       
+Toronto, ON, Canada       
 Data Scientist         
-February 2019 – Present
+February 2019 – March 2020
 
 - Designed, implemented and deployed from ground up for the organization the frameworks for A/B/n tests by Bayesian statistics and bootstrap, cutting the statistical analysis time from 3 days to 1 hour.
 - Designed, implemented and deployed collaborative filtering based recommender system for marketing team.
@@ -35,7 +35,7 @@ February 2019 – Present
 - Optimized the marketing funnels and boosted the in-bound leases from partnering merchants from 0 to 60-80 within one month.
 
 **WeCloudData**                
-Toronto, ON        
+Toronto, ON, Canada        
 Part Time Instructor     
 August 2019 – Present
 
@@ -80,7 +80,12 @@ September 2016 – July 2017
 
 ### EDUCATION
 
-- UCLA ANDERSON SCHOOL OF MANAGEMENT        
+- York University
+Toronto, ON, Canada
+Master of Arts in Applied Mathematics
+June 2021 (Expected)
+
+- UCLA Anderson School of Management   
 Los Angeles, CA, U.S.A        
 Master of Science in Business Analytics (MSBA)      
 December 2018      
