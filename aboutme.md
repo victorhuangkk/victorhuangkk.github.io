@@ -78,9 +78,9 @@ September 2016 – July 2017
 
 ### EDUCATION
 
-- York University
-Toronto, ON, Canada
-Master of Arts in Applied Mathematics
+- York University      
+Toronto, ON, Canada       
+Master of Arts in Applied Mathematics       
 June 2021 (Expected)
 
 - UCLA Anderson School of Management   
