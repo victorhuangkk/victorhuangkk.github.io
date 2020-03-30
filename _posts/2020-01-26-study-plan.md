@@ -65,6 +65,7 @@ Statistics
 18. 见识（吴军）(Done)
 19. 历代经济变革得失
 20. Machine Learning and Pattern Recognition
+21. Computer Age Statistical Inference
 
 
 ## Summary:
