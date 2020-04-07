@@ -89,7 +89,7 @@ To better understand different metric, a distribution summary is provided
 
 ## Concurrent Computation
 
-
+To 
 
 ## Statistical Analysis
 
@@ -109,7 +109,7 @@ To calculate p value by bootstrap, users will be asked for metrics' value they w
 
 ## Business And Statistical Analysis
 
-There are multiple ways of statistical data analysis, 
+There are multiple ways of statistical data analysis,
 
 
 ### Descriptive Statistics
