@@ -89,7 +89,7 @@ To better understand different metric, a distribution summary is provided
 
 ## Concurrent Computation
 
-To 
+To consider the 
 
 ## Statistical Analysis
 
