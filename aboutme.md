@@ -11,7 +11,7 @@ Self-directed and driven data scientist with comprehensive accomplishments apply
 
 ### SKILLS
 #### Programming:
-Python, R, Scala, Java, Julia, Spark, JavaScript
+Python, R, Julia, Go, Java, Scala, JavaScript
 
 #### Computer Science:
 Machine Learning, Database Management, Data structures and Algorithms

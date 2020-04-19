@@ -89,7 +89,7 @@ To better understand different metric, a distribution summary is provided
 
 ## Concurrent Computation
 
-To consider the 
+To accommodate multiple users of the same, concurrency has being considered at the beginning. From dash's perspective,  
 
 ## Statistical Analysis
 
