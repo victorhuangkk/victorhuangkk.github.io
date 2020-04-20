@@ -7,7 +7,7 @@ subtitle: Data Scientist and Aspiring Statistician
 
 ### SUMMARY
 
-Self-directed and driven data scientist with comprehensive accomplishments applying statistical modeling, machine learning and data visualization to ensure success and achieve goals. Known as an innovative thinker with strong Python, R acumen, SQL, JavaScript and Julia. Demonstrated success developing and seamlessly executing plans across complex data sets. Recognized for maximizing performance by implementing appropriate data mining strategies through analysis of details to gain understanding of the data structures, databases, relationships and business needs. Highly organized, creative problem solver who excels at producing business value by applying data science best practices to challenging problems.
+Self-directed and driven data scientist with comprehensive accomplishments applying statistical modeling, machine learning and data visualization to ensure success and achieve goals. Known as an innovative thinker with strong Python, R, Go, Scala and Java. Demonstrated success developing and seamlessly executing plans across complex data sets. Recognized for maximizing performance by implementing appropriate data mining strategies through analysis of details to gain understanding of the data structures, databases, relationships and business needs. Highly organized, creative problem solver who excels at producing business value by applying data science best practices to challenging problems.
 
 ### SKILLS
 #### Programming:
@@ -17,18 +17,18 @@ Python, R, Julia, Go, Java, Scala, JavaScript
 Machine Learning, Database Management, Data structures and Algorithms
 
 #### Business Intelligence:    
-Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads
+Looker, MySQL(InnoDB), MongoDB, Tableau, SEO
 
 
 ### PROFESSIONAL EXPERIENCE
 
-**Canadian Tire**
-Toronto, ON, Canada
-Sr. Data Scientist
+**Canadian Tire**     
+Toronto, ON, Canada        
+Sr. Data Scientist         
 April 2020 - Present
 
 - Developed multiple arms bandit based experimentation system in house.
-- Developed and deployed nlp and image based item similarity analysis.
+- Developed and deployed NLP and CV based item similarity analysis.
 
 **Ritual.co**  
 Toronto, ON, Canada       
