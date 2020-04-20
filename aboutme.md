@@ -22,6 +22,14 @@ Looker, SQL, MongoDB, Tableau, Google Analytics, Google Ads
 
 ### PROFESSIONAL EXPERIENCE
 
+**Canadian Tire**
+Toronto, ON, Canada
+Sr. Data Scientist
+April 2020 - Present
+
+- Developed multiple arms bandit based experimentation system in house.
+- Developed and deployed nlp and image based item similarity analysis.
+
 **Ritual.co**  
 Toronto, ON, Canada       
 Data Scientist         
