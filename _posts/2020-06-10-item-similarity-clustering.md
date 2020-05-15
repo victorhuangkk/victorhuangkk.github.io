@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Item Similarity Score Calculation Via LDA and DBSCAN
+title: Item Similarity Calculation Via LDA and Clutering
 tags: [marketing, statistics, nlp]
 comments: true
 ---
 
 ## Motivation
-In user
+To understand how our customer make their decisions to approach certain products, we
 
 ## Natural Language Processing
 
