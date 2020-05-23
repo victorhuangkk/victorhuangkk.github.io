@@ -32,18 +32,28 @@ There are a few guidelines I followed to add instruments to my portfolio:
 3. Information will be digested as soon as possible and that's the reason why you may find counterintuitive phenomenon in the market
 
 
-
-- Technology
+I would summarize all instruments in the following categories. In terms of stock screening and 
+### Equities
+  
+#### Technology
   - U.S.
     1. Amazon, Apple
     2. Uber
   - China
     1. Bilibili, Alibaba
     2. Gensheixue(Online learning)
-- BioTech
-  1. Gilead Science, Crisper
-- Defense
+    
+#### BioTech
+  1. Gilead Science
+  2. Crisper
+  
+#### Defense
   1. Lockheed Martin
+  
+### Leveraged ETFs
+
+
+### Bonds 
 
 
 In most of the periods between 2016-2020, stocks are highly
@@ -56,9 +66,9 @@ I do think portfolio optimization is useful. But we cannot simply give the frame
 
 But there are two rules which cannot be broken:
 1. Diversify portfolio as much as possible
-2. Never short the market
+2. Never short the market ()
 
-I used a Python package to conduct portfolio optimization
+I used R here to conduct data analysis and 
 
 The mathematical formula for this optimization task is stated in below.
 
@@ -111,7 +121,7 @@ bt <- portfolioBacktest(list("risk parity portfolio" = risk_parity,
 
 ## Backtest
 
-To verify the risk 
+To verify the approach, I used the backtest to verify the current strategy. Portfolios would be constructed and revaluated on a two month basis. There are potential risks which should be addressed here. 
 
 ```{r}
 # check performance summary
