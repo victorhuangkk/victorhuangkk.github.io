@@ -24,7 +24,7 @@ You may find all the materials online. First is to read through Guido van Rossum
 
 
 ### SQL
-SQL is data science's mother language. Nobody would help you to fetch data and summarize them. If you work for a start-up or mid-size company, to be honest, a huge amount of your time will be spent in writing SQL. to be honest, SQL is an easy language to learn. As long as you are clear about the logic, you know how to write your query. Read a few how-to book plus some exercise would shape you as a good SQL writer. Then, the next step becomes how to re-use your SQL code and maintain them. Most of the time, SQL is a one time request. People care about one data points and you write SQL to pull data for them. My suggestion is, even for those requests, write a short report/documentation for QA purposes. And for reusable SQL components, I would write Python/R to pull data. It may take longer in the beginning but saves effort 
+SQL is data science's mother language. Nobody would help you to fetch data and summarize them. If you work for a start-up or mid-size company, to be honest, a huge amount of your time will be spent in writing SQL. to be honest, SQL is an easy language to learn. As long as you are clear about the logic, you know how to write your query. Read a few how-to book plus some exercise would shape you as a good SQL writer. Then, the next step becomes how to re-use your SQL code and maintain them. Most of the time, SQL is a one time request. People care about one data points and you write SQL to pull data for them. My suggestion is, even for those requests, write a short report/documentation for QA purposes. And for reusable SQL components, I would write Python/R to pull data. It may take longer in the beginning but saves effort
 
 ### Business Sense and KPI
 
@@ -34,7 +34,7 @@ Many times in your daily work, data questions are loosely formulated. Product ma
 
 People may think data scientists are applied statistician with better coding skills. This is partially correct. But the truth is that, your expectation is more than this. Your coworkers may not have sufficient statistical background. They may view statistics as black magic, solve all problems in a few seconds, which will never happen. Statistics is crucial to data science. People may use visualizations a lot, to tell vivid stories, but visualizations doesn't tell valid stories, at least not always. You cannot unveil causalities by fancy graphs and it is difficult to estimate relations between different factors. You will need statistical inference to differentiate buckets of testing groups.
 
-And the part most people don't like, math, is also important. Math is not required in your daily job since high school math is more than sufficient in 'high tech' industry. Partial differential equations and martingales are not required to be complete your analysis but they helps you differentiate from others.
+And the part most people don't like, math, is also important. Math is not required in your daily job since high school math is more than sufficient in 'high tech' industry. Partial differential equations and martingales are not required to be complete your analysis but they helps you differentiate from others. So, my suggestion is to sharpen this 'not very useful' skills as much as possible.
 
 ### Machine Learning and Mathematical Optimization
 
@@ -44,4 +44,4 @@ And once you further to machine learning, all core engines are mathematical opti
 
 ## Communication and Presentation
 
-I remembered that IBM call data scientist as the data analyst with presentation skills. It is
+I remembered that IBM call data scientist as the data analyst with presentation skills. It is exactly true if you work for small or mid size firms. Nobody cares about how fancy your model is or how complicated your 
