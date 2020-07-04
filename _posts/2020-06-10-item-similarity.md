@@ -49,9 +49,10 @@ There are multiple ways to combine embedding layers together. I listed a few in 
 
 ## Reference:
 I borrowed a lot from others' previous work. Here are the original sources:
-1. https://arxiv.org/pdf/1405.4053v2.pdf
-2. https://networkx.github.io/documentation/latest/
-3. https://github.com/aditya-grover/node2vec
-4. https://radimrehurek.com/gensim/models/word2vec.html
-5. https://radimrehurek.com/gensim/models/doc2vec.html
-6. https://arxiv.org/abs/1804.05262
+1. [Document Embedding](https://arxiv.org/pdf/1405.4053v2.pdf)
+2. [NetworkX](https://networkx.github.io/documentation/latest/)
+3. [Node2Vec](https://github.com/aditya-grover/node2vec)
+4. [Gensim Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html)
+5. [Gensim Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html)
+6. [Embedding Averging](https://arxiv.org/abs/1804.05262)
+7. [EGES Paper](https://arxiv.org/pdf/1803.02349.pdf)
