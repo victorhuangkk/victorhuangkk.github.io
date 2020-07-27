@@ -36,6 +36,8 @@ March 2020 - Present
 - Developed multiple arms bandit based experimentation system in house.
 - Developed and deployed NLP and CV based item similarity analysis.
 
+***Major Achievements***
+
 **Ritual.co**  
 Toronto, ON, Canada       
 Data Scientist         
@@ -47,6 +49,8 @@ February 2019 – March 2020
 - Developed merchant lifetime value model by dynamic churning and tenure analysis.
 - Build multiple machine learning models by _TF-IDF_ and _SVM_, delivered an item selection system for business users.
 - Optimized the marketing funnels and boosted the in-bound leases from partnering merchants from 0 to 60-80 within one month.
+
+***Major Achievements***
 
 **WeCloudData**                
 Toronto, ON, Canada        
@@ -94,12 +98,12 @@ September 2016 – July 2017
 
 - York University      
 Toronto, ON, Canada       
-Master of Arts in Applied Mathematics       
+Applied Mathematics(M.A.)           
 June 2021 (Expected)
 
 - UCLA Anderson School of Management   
 Los Angeles, CA, U.S.A        
-Master of Science in Business Analytics (MSBA)      
+Master of Analytics(M.S.)       
 December 2018      
 
 - UCLA Department of Chemistry      
@@ -112,7 +116,7 @@ June, 2017
 Pittsburgh, PA, U.S.A       
 B.S. Chemistry/Math Minor    
 May 2016
- - Graduate with Magna Cum Laude, Member of Delta Epsilon Iota Academic Honor Society, Dean&#39;s List.
+ - Graduate with Magna Cum Laude, Member of Delta Epsilon Iota Academic Honor Society, Dean's List.
 
 ### PUBLICATION
 
