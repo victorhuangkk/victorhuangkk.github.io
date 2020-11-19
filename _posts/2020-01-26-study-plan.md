@@ -42,30 +42,24 @@ Probability Theory
 Statistics
 
 ## Book List
-1. 朱镕基讲话实录 I
-1. 朱镕基讲话实录 II
-1. 朱镕基讲话实录 III (Done)
-1. 朱镕基讲话实录 IV
-2. 文明是副产品
-3. 金刚经，心经，坛经
-4. 国史大纲
-5. Data Structure and Abstractions
-6. 统计学习基础
-7. 为什么，一种因果关系的新科学
-8. Introduction to Linear Algebra
-9. Statistical Rethinking
-10. The Intelligent Investor
-11. 浪潮之巅
-12. 甜与权力：糖在近代历史上的地位
-13. 社会契约论
-14. 未来简史
-15. Capitalism in America: A History
-16. 中国的经济制度
-17. 贫穷的本质
-18. 见识（吴军）(Done)
-19. 历代经济变革得失
-20. Machine Learning and Pattern Recognition
-21. Computer Age Statistical Inference
+
+1. 历代经济变革得失
+2. 甜与权力：糖在近代历史上的地位
+3. 未来简史
+4. 繁荣与衰退 一部美国经济发展史
+5. 中国的经济制度
+6. 改革开放以来的中国经济：1978—2018
+7. 线性代数（第5版）
+8. 光荣与梦想
+9. 西方哲学史
+10. 原则 如何创造出完美独特的自己
+11. 腾讯电竞
+12. 毛泽东选集
+13. 概率论与数理统计教程
+14. 激荡四十年
+15. 互联网四大：亚马逊、苹果、脸书和谷歌的隐藏基因
+16. 将心注入 一杯咖啡成就星巴克传奇
+17. 精益创业2.0
 
 
 ## Summary:
